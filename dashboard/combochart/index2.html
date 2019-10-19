@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Chart Sample With Database</title>
+</head>
+
+<link rel="stylesheet" href="chart.css"></link>
+
+<body>
+	<div>
+		<select id="series1">
+			<option value="">Select Series 1</option>
+			<option value="generic_sales">generic_sales</option>
+			<option value="brand_sales">brand_sales</option>
+			<option value="generic_price">generic_price</option>
+			<option value="brand_price">brand_price</option>
+			<option value="brand_marketing">brand_marketing</option>
+			<option value="brand_events">brand_event</option>
+		</select>
+
+		<select id="series2">
+			<option value="">Select Series 2</option>
+			<option value="generic_sales">generic_sales</option>
+			<option value="brand_sales">brand_sales</option>
+			<option value="generic_price">generic_price</option>
+			<option value="brand_price">brand_price</option>
+			<option value="brand_marketing">brand_marketing</option>
+			<option value="brand_events">brand_event</option>
+		</select>
+		
+		<button onclick="getCharts();">Retrieve</button>
+		<button onclick="loadCombo();">Combo</button>
+		
+	</div>
+
+	<hr/>
+
+	<div id="chart-canvas" class="chart-container" style="position: relative; height:40vh; width:80vw">
+		<canvas id="myChart"></canvas>
+	</div>
+
+	<script src="chart.bundle.js"></script>
+	<script src="chart_logic2.js"></script>
+
+</body>
+
+</html>

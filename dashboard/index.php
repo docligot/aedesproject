@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +7,7 @@
     <title>Project AEDES</title>
     <link rel="stylesheet" href="bulma.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/05a7e6096a.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/05a7e6096a.js" crossorigin="anonymous"></script> -->
     <script src='maps/mapbox-gl.js'></script>
     <link href='maps/mapbox-gl.css' rel='stylesheet' />
     <style>
@@ -17,6 +15,7 @@
         position: sticky;
           top: 3.25rem;
       }
+
     </style>
   </head>
     <header class="">
@@ -24,16 +23,15 @@
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a href="" class="navbar-item is--brand">
-            <img class="navbar-brand-logo" src="https://via.placeholder.com/250x50?text=AEDES" title="" style="">
+            <img class="navbar-brand-logo" src="assets/logo4.png" title="" style="">
             </a>
-            <a class="navbar-item is-tab is-hidden-mobile is-active"><span class="icon is-medium"><i class="fas fa-bullseye"></i></span>AEDES Project</a>
+            <a class="navbar-item is-tab is-hidden-mobile is-active"><span class="icon is-medium"><i class="fa fa-bullseye"></i></span >AEDES Project</a>
           </div>
           <div class="navbar-menu navbar-end" id="navMenu">
-            <a class="navbar-item is-tab is-hidden-tablet is-active">Home</a> <a class="navbar-item is-tab is-hidden-tablet" href="https://github.com/mazipan/bulma-admin-dashboard-template">Github</a> <a class="navbar-item is-tab is-hidden-tablet" href="https://mazipan.github.io/bulma-resume-template/">Resume Template</a> <a class="navbar-item is-tab is-hidden-tablet" href="#about">About</a> <a class="navbar-item nav-tag"><span class="icon is-small"><i class="fa fa-envelope-o"></i> </span><span class="tag is-primary tag-notif">6</span></a>
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
-                <figure class="image is-32x32" style="margin-right:.5em"><img src="https://avatars1.githubusercontent.com/u/7221389?v=4&amp;s=32"></figure>
-                mark
+                <figure class="image is-32x32" style="margin-right:.5em"><i class="fa fa-user"></i></figure>
+                LGU
               </a>
               <div class="navbar-dropdown is-right">
                 <a class="navbar-item"><span class="icon is-small"><i class="fa fa-user-o"></i> </span>&nbsp; Profile</a>
@@ -52,64 +50,42 @@
             <nav class="menu sticky">
               <p class="menu-label">Home</p>
               <ul class="menu-list">
-                <li><a id="dashboard" class="is-active" href="#">
-                  <span class="icon is-small"><i class="fas fa-info-circle"></i></span> What is Project AEDES?</a>
-                  <ul class="menu-list">                    
-                    <li><a>AEDES Project</a></li>
-                    <li><a>Our Challenge</a></li>
-                    <li><a>The Problem</a></li>
-                    <li><a>Our Solution</a></li>
-                    <li><a>Related Literature</a></li>
-                    <li><a>Objectives and Principles</a></li>
+                <li><a id="project" class="is-active" href="#">
+                  <span class="icon is-small"><i class="fa fa-info-circle"></i></span> What is Project AEDES?</a>
+                  <ul id="project_list" class="menu-list">                    
+                    <li><a class="" href="#aedes_1">AEDES Project</a></li>
+                    <li><a class="" href="#aedes_2">Our Challenge</a></li>
+                    <li><a class="" href="#aedes_3">The Problem</a></li>
+                    <li><a class="" href="#aedes_4">Our Solution</a></li>
+                    <li><a class="" href="#aedes_5">Correlating: Dengue Cases and Deaths</a></li>
+                    <li><a class="" href="#aedes_6">Related Literature</a></li>
+                    <li><a class="" href="#aedes_7">Objectives and Principles</a></li>
                   </ul>
                 </li>
               </ul>
+              <p class="menu-label">Dashboard</p>
+                <ul class="menu-list">
+                  <li  onclick='generateChart()'><a id="dashboard" class="" href="#"><span class="icon is-small"><i class="fa fa-bar-chart"></i></span> Dashboard</a></li>
+                </ul>
               <p class="menu-label">Research</p>
                 <ul class="menu-list">
-                  <li><a id="search" class="" href="#"><span class="icon is-small"><i class="fas fa-search"></i></span> Search</a></li>
-                  <li><a id="models" class="" href="#">
-                    <span class="icon is-small"><i class="fas fa-cogs"></i></span> Models</a>
-                  </li>
-                  <li><a id="location" class="" href="#"><span class="icon is-small"><i class="fas fa-map-marker-alt"></i></span> Mapping</a></li>
+                  <li><a id="search" class="" href="#"><span class="icon is-small"><i class="fa fa-search"></i></span> Search</a></li>
+                  <li><a id="models" class="" href="#"><span class="icon is-small"><i class="fa fa-cogs"></i></span> Models</a></li>
+                  <li onclick='generateMaps()'><a id="mapping" class="" href="#"><span class="icon is-small"><i class="fa fa-map-marker"></i></span> Mapping</a></li>
                 </ul>
-              <p class="menu-label">Dashboard</p>
               <p class="menu-label">References</p>
+                <ul class="menu-list">
+                  <li><a id="github" class="" href="#"><span class="icon is-small"><i class="fa fa-github"></i></span> Github Link</a></li>
+                  <li><a id="presentation" class="" href="#">
+                    <span class="icon is-small"><i class="fa fa-file-powerpoint-o"></i></span> Presentation</a>
+                  </li>
+                </ul>
               <p class="menu-label">About The Authors</p>
-
+                <ul class="menu-list">
+                  <li><a id="authors" class="" href="#"><span class="icon is-small"><i class="fa fa-user"></i></span> Authors</a></li>
+                </ul>
             </nav>
           </aside>
-                 
-
-          <!-- <aside class="column is-2 aside">
-            <nav class="menu">
-              <p class="menu-label">General</p>
-              <ul class="menu-list">
-                <li><a class="is-active" href="#"><span class="icon is-small"><i class="fa fa-tachometer"></i></span> Dashboard</a></li>
-              </ul>
-              <p class="menu-label">Administration</p>
-              <ul class="menu-list">
-                <li><a href="/bulma-admin-dashboard-template/forms.html"><span class="icon is-small"><i class="fa fa-pencil-square-o"></i></span> Forms</a></li>
-                <li><a href="/bulma-admin-dashboard-template/ui-elements.html"><span class="icon is-small"><i class="fa fa-desktop"></i></span> UI Elements</a></li>
-                <li><a href="/bulma-admin-dashboard-template/tables.html"><span class="icon is-small"><i class="fa fa-table"></i></span> Tables</a></li>
-                <li><a href="/bulma-admin-dashboard-template/presentations.html"><span class="icon is-small"><i class="fa fa-bar-chart"></i></span> Presentations</a></li>
-                <li>
-                  <a><i class="fa fa-cog"></i> Settings</a>
-                  <ul>
-                    <li><a>Members</a></li>
-                    <li><a>Plugins</a></li>
-                    <li><a>Add a member</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <p class="menu-label">Live On</p>
-              <ul class="menu-list">
-                <li><a><span class="icon is-small"><i class="fa fa-bug"></i></span> Additional Pages</a></li>
-                <li><a><span class="icon is-small"><i class="fa fa-windows"></i></span> Extras</a></li>
-                <li><a><span class="icon is-small"><i class="fa fa-laptop"></i></span> Landing Page</a></li>
-              </ul>
-            </nav>
-          </aside> -->
-          
           <main class="column main ">
             <!-- <section class="">
               <div class="level">
@@ -126,13 +102,14 @@
                   </div>
                 </div>
               </div> -->
-              <div id="page_0" class="columns is-multiline">
+              <div id="page_0" name="project" class="columns is-multiline">
+                <span id="aedes_1"></span>
                 <div class="column is-full">
                   <section class="hero">
                     <div class="hero-body">
                       <div class="container">
-                        <h1 class="title is-2">
-                          <i class="fas fa-bullseye"></i> AEDES Project
+                        <h1 class="title is-2 has-text-centered">
+                          <i class="fa fa-bullseye"></i> AEDES Project
                         </h1>
                         <!-- <h2 class="subtitle">
                         </h2> -->
@@ -147,6 +124,7 @@
                         <figure class="image">
                           <img src="slides/Slide1.PNG">
                         </figure>
+                        <span id="aedes_2"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -175,10 +153,31 @@
                             </div>
                           </div>
                         </section>
+                        <span id="aedes_3"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
                             The Problem
+                          </h2>
+                          <h2 class="block">
+                            <div class="columns ">
+                              <div class="column is-half">
+                                <h1 class="title is-1 has-text-centered">
+                                  1,107
+                                </h1>
+                                <h2 class="subtitle has-text-centered">
+                                  Deaths
+                                </h2>
+                              </div>
+                              <div class="column is-half">
+                                <h1 class="title is-1 has-text-centered">
+                                  271,000+
+                                </h1>
+                                <h2 class="subtitle has-text-centered">
+                                  Cases
+                                </h2>
+                              </div>
+                            </div>
                           </h2>
                           <div class="block">
                             <div class="columns">
@@ -199,18 +198,39 @@
                               </div>
                             </div>
                           </div>
-                          <h2 class="block">
-                            Dengue is now at epidemic levels in the Philippines with over 271,000 cases and more than 1,100 deaths as of August 2019. Data on dengue takes time to be manually gathered which hampers the health sector’s ability to deal with the threat. Dengue is spread between infected cases through the Aedes Aegypti mosquito and mosquitoes are known to breed in damp locations and stagnant water pools.
-                          </h2>
+                          <div class="block">
+                            <h1 class="subtitle is-7">Source: Department of Health - as of August 2019</h1>
+                          </div>
+                          <div class="block">
+                            <div class="columns">
+                              <div class="column is-one-third has-text-centered">
+                                <h2 class="subtitle  is-3 has-text-centered">
+                                  Reporting is manual and dengue data is delayed.
+                                </h2>
+                              </div>
+                              <div class="column is-one-third has-text-centered">
+                                <h2 class="subtitle  is-3 has-text-centered">
+                                  Public Health Sector’s resources are limited. 
+                                </h2>
+                              </div>
+                              <div class="column is-one-third has-text-centered">
+                                <h2 class="subtitle  is-3 has-text-centered">
+                                  We need to move the emphasis from treatment to prevention. 
+                                </h2>
+                              </div>
+                            </div>
+                          </div>
+                          <span id="aedes_4"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
-                            Our Solution
+                            Our Solution: Advanced Dengue Prediction
                           </h2>
                           <h2 class="block">
-                            We propose an automated information portal that correlates dengue cases and deaths with real-time data from climate, google searches, and satellite maps, giving an advance indicator of when dengue will emerge and potential dengue hotspot locations. This portal is accessible publicly but is targeted towards public health and local government agencies to give them advanced notice of dengue outbreaks and help prioritize resources. 
+                            <h2 class="subtitle is-4">
+                              Correlate dengue cases and deaths with real-time data from climate, google searches, and satellite maps, giving an advance indicator of when dengue will emerge and potential dengue hotspot locations. 
+                            </h2>
 
-                            <br><br>
 
                             <div class="block">
                               <div class="columns">
@@ -259,6 +279,44 @@
                             </div>
                           </h2>
                         </section>
+                        <span id="aedes_5"></span>
+                        <hr>
+                        <section class="block">
+                          <div class="block">
+                            <figure class="image">
+                              <img src="assets/denguecycle.jpg" alt="">
+                            </figure>
+                          </div>
+                        </section>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Searches for Dengue: Epidemic of Panic
+                          </h2>
+                          <div class="block">
+                            <figure class="image">
+                              <img src="assets/denguesearches.jpg" alt="">
+                            </figure>
+                          </div>
+                        </section>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Correlating: Dengue Cases and Deaths
+                          </h2>
+                          <div class="block">
+                            Test
+                          </div>
+                        </section>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Finding Mosquito Hotpots From Satellite Images
+                          </h2>
+                          <div class="block">
+                            Test
+                          </div>
+                        </section>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -287,14 +345,15 @@
                             We have conducted research and cite the following prior work that provide the foundation for this solution: 
                             <div class="content">
                               <ol type="i">
-                                <li>In Caro, et. al. (2016), "Forecasting and Data Visualization of Dengue spread in the Philippine Visayas Island group", researchers proposed a method to predict dengue cases in the Visayas regions through the use of an Artificial Neural Network (ANN) which predicted dengue cases (R 0.8) through the use of climate data (temperature and rainfall) and a lagged number of previous dengue cases. </li>
-                                <li>In Yang, et. al. (2016), "Advances in using Internet searches to track dengue", researchers used Google searches for 'dengue' and related keywords to predict dengue cases in Mexico, Brazil, Thailand, Singapore and Taiwan. </li>
-                                <li>In Chua, Tan, et. al. (2018), "Project Project Still Water", researchers proposed a methodology to detect dengue hotspots using FAPAR (Vegetation) and NDWI (Water) areas. </li>
-                                <li>In Chan, Johnson (2012), "The Incubation Periods of Dengue Viruses", researchers establish the incubation periods for dengue. 95% of EIPs are between 5 and 33 days at 25C, and 2 and 15 days at30C, with means of 15 and 6.5 days, respectively which suggests that climate has an effect on the incubation of the disease. </li>
+                                <li><b>In Caro, et. al. (2016)</b>, "<a href="https://github.com/aedesproject/nasa_hack/blob/master/literature/07785420%20-%20Forecasting%20and%20Data%20Visualization%20of%20Dengue%20Spread%20in%20PH%20Visayas.pdf" target="_blank">Forecasting and Data Visualization of Dengue spread in the Philippine Visayas Island group</a>", researchers proposed a method to predict dengue cases in the Visayas regions through the use of an Artificial Neural Network (ANN) which predicted dengue cases (R 0.8) through the use of climate data (temperature and rainfall) and a lagged number of previous dengue cases. </li>
+                                <li><b>In Yang, et. al. (2016)</b>, "<a href="https://github.com/aedesproject/nasa_hack/blob/master/literature/Advances_in_using_Internet_searches_to_track_dengu.pdf" target="_blank">Advances in using Internet searches to track dengue</a>", researchers used Google searches for 'dengue' and related keywords to predict dengue cases in Mexico, Brazil, Thailand, Singapore and Taiwan. </li>
+                                <li><b>In Chua, Tan, et. al. (2018)</b>, "<a href="https://github.com/aedesproject/nasa_hack/blob/master/literature/Stagnant%20Water%20Maps%20from%20Satellite%20Infrared%20Data.pdf" target="_blank">Project Project Still Water</a>", researchers proposed a methodology to detect dengue hotspots using FAPAR (Vegetation) and NDWI (Water) areas. </li>
+                                <li><b>In Chan, Johnson (2012)</b>, "<a href="https://github.com/aedesproject/nasa_hack/blob/master/literature/Incubation-Dengue-pone.0050972.pdf" target="_blank">The Incubation Periods of Dengue Viruses</a>", researchers establish the incubation periods for dengue. 95% of EIPs are between 5 and 33 days at 25C, and 2 and 15 days at30C, with means of 15 and 6.5 days, respectively which suggests that climate has an effect on the incubation of the disease. </li>
                               </ol>
                             </div>
                           </h2>
                         </section>
+                        <span id="aedes_6"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -327,12 +386,74 @@
 
                           </h2>
                         </section>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Our Impact
+                          </h2>
+                          <div class="block">
+                          <div class="columns ">
+                            <div class="column is-half">
+                              <figure class="image">
+                                <img src="assets/ourimpact.jpg" alt="">
+                              </figure>
+                            </div>
+                            <div class="column is-half">
+                              <h1 class="title is-2 has-text-centered">
+                                For every single day we can reduce the lag in response time we save: 
+                              </h1>
+                              <div class="columns">
+                                <div class="column is-half">
+                                  <h2 class="title is-1 has-text-centered">
+                                    5
+                                  </h2>
+                                  <h2 class="subtitle is-3 has-text-centered">
+                                    Lives
+                                  </h2>
+                                </div>
+                                <div class="column is-half">
+                                  <h2 class="title is-1 has-text-centered">
+                                    1,130
+                                  </h2>
+                                  <h2 class="subtitle is-3 has-text-centered">
+                                    New Cases
+                                  </h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                         </div>
+                        </section>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Next Steps
+                          </h2>
+                          <div class="block">
+                            <div class="content">
+                              <ol type="1">
+                                <li class="subtitle is-3">Complete time-series training for all regions</li>
+                                <li class="subtitle is-3">Add satellite data for all target regions</li>
+                                <li class="subtitle is-3">Recommend target areas for on the ground dengue case and deaths monitoring</li>
+                                <li class="subtitle is-3">Set future thresholds for dengue epidemics and short list areas that will be hit first</li>
+                              </ol>
+                            </div>
+                          </div>
+                        </section>
+                        <hr>
+                        <section class="block">
+                          <div class="block">
+                            <figure class="image">
+                              <img src="slides/Slide10.png" alt="">
+                            </figure>
+                          </div>
+                        </section>
                       </div>
                     </div>
                   </section>
                 </div>
               </div>
-              <div id="page_1" class="columns is-hidden is-multiline">
+              <!-- <div id="page_1" class="columns is-multiline">
                 <div class="column">
                   <div class="box notification is-primary">
                     <div class="heading">Top Seller Total</div>
@@ -437,34 +558,35 @@
                     </div>
                   </div>
                 </div>
+              </div> -->
+              <div id="page_1" name="dashboard" class="columns is-hidden is-multiline">
+              <div class="column is-full">
+                  <section class="hero">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title is-2">
+                          Dashboard
+                        </h1>
+                        <hr>
+                        <section class="block">
+                          <article class="message is-dark">
+                            <div class="message-header">Google Searches</div>
+                            <div class="message-body">
+                              <div id="barHeadDiv">
+                                <canvas id="barContentDiv" style="height: 400px;"></canvas>
+                              </div>
+                            </div>
+                          </article>
+                        </section>
+                      </div>
+                    </div>
+                  </section>
+                </div>  
+              <div class="column is-full">
+                  
+                </div>
               </div>
-              <div id="page_2" class="columns is-hidden is-multiline">
-                <div class="column is-6">
-                  <article class="message is-dark">
-                    <div class="message-header">Chart</div>
-                    <div class="message-body">Test</div>
-                  </article>
-                </div>
-                <div class="column is-6">
-                  <article class="message is-dark">
-                    <div class="message-header">Chart</div>
-                    <div class="message-body">Test</div>
-                  </article>
-                </div>
-                <div class="column is-6">
-                  <article class="message is-dark">
-                    <div class="message-header">Chart</div>
-                    <div class="message-body">Test</div>
-                  </article>
-                </div>
-                <div class="column is-6">
-                  <article class="message is-dark">
-                    <div class="message-header">Chart</div>
-                    <div class="message-body">Test</div>
-                  </article>
-                </div>
-              </div>
-              <div id="page_3" class="columns is-hidden is-multiline">
+              <div id="page_2" name="search" class="columns is-hidden is-multiline">
                 <div class="field has-addons">
                   <div class="control">
                     <input class="input" type="text" placeholder="Find a repository">
@@ -773,35 +895,13 @@
                   </tbody>
                 </table>
               </div>
-              <div id="page_4" class="columns is-hidden is-multiline">
-                <div class="column is-quarter select">
-                  <select onchange="goToPoint(this.value);">
-                    <option value=''>Select Location:</option>
-                    <option value=0>Edsa Shangri-la</option>
-                    <option value=1>The Podium</option>
-                    <option value=2>Buffalo Wild Wings</option>
-                    <option value=3>Oriental Pearl</option>
-                    <option value=4>ActivAsia Inc.</option>
-                    <option value=5>Pioneer Center</option>
-                    <option value=6>Greenfield</option>
-                    <option value=7>Puregold</option>
-                    <option value=8>Hideout</option>
-                  </select>
-
-                  <div id="renderWindow"></div>
-                </div>
-                <div class="column is-three-quarters">
-                  <div id='map' style='height: 400px;'></div>
-                  <div id='marker1'></div>
-                </div>
-              </div>
-              <div id="page_5" class="columns is-hidden is-multiline">
+              <div id="page_3" name="models" class="columns is-hidden is-multiline">
                 <div class="column is-full">
                   <section class="hero">
                     <div class="hero-body">
                       <div class="container">
                         <h1 class="title is-2">
-                          Researchers
+                          Models
                         </h1>
                         <hr>
                         <section class="block">
@@ -817,123 +917,463 @@
                   </section>
                 </div>
               </div>
+              <div id="page_4" name="mapping" class="columns is-hidden is-multiline">
+                <div class="column is-full">
+                  <div class="container">
+                    <h1 class="title is-2">
+                      Mapping
+                    </h1>
+                  </div>
+                </div>
+                <div class="column is-full">
+                  <article class="message is-dark">
+                    <div class="message-header">Quezon City</div>
+                    <div class="message-body">
+                      <div id='map3'></div>
+                      <div id='marker3'></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="column is-6">
+                  <article class="message is-dark">
+                    <div class="message-header">Iloilo</div>
+                    <div class="message-body">
+                      <div id='map2'></div>
+                      <div id='marker2'></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="column is-6">
+                  <article class="message is-dark">
+                    <div class="message-header">Dagupan</div>
+                    <div class="message-body">
+                      <div id='map6'></div>
+                      <div id='marker6'></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="column is-6">
+                  <article class="message is-dark">
+                    <div class="message-header">Tacloban</div>
+                    <div class="message-body">
+                      <div id='map4'></div>
+                      <div id='marker4'></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="column is-6">
+                  <article class="message is-dark">
+                    <div class="message-header">Cotabato</div>
+                    <div class="message-body">
+                      <div id='map5'></div>
+                      <div id='marker5'></div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div id="page_5" name="github" class="columns is-hidden is-multiline">
+                <div class="column is-full">
+                  <section class="hero">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title is-2">
+                          Github
+                        </h1>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Test
+                          </h2>
+                          <h2 class="block">
+                            Test 
+                          </h2>
+                        </section>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div id="page_6" name="presentation" class="columns is-hidden is-multiline">
+                <div class="column is-full">
+                  <section class="hero">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title is-2">
+                          Presentation
+                        </h1>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Test
+                          </h2>
+                          <h2 class="block">
+                            Test 
+                          </h2>
+                        </section>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div id="page_7" name="authors" class="columns is-hidden is-multiline">
+                <div class="column is-full">
+                  <section class="hero">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title is-2">
+                          Authors
+                        </h1>
+                        <hr>
+                        <div class="column is-three-quarters">
+                          <section class="block">
+                            <article class="media">
+                              <figure class="media-left">
+                                <p class="image is-64x64">
+                                  <img src="assets/author_doc.jpg">
+                                </p>
+                              </figure>
+                              <div class="media-content">
+                                <div class="content">
+                                  <p>
+                                    <strong>Dominic Ligot</strong> <small>dominic.ligot@cirrolytix.com</small>
+                                    <br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                  </p>
+                                </div>
+                                <nav class="level is-mobile">
+                                  <div class="level-left">
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                    </a>
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                    </a>
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                    </a>
+                                  </div>
+                                </nav>
+                              </div>
+                              <div class="media-right">
+                                <button class="fa fa-linkedin"></button>
+                              </div>
+                            </article>
+                          </section>
+                        </div>
+                        <div class="column is-three-quarters">
+                          <section class="block">
+                            <article class="media">
+                              <figure class="media-left">
+                                <p class="image is-64x64">
+                                  <img src="assets/author_claire.jpg">
+                                </p>
+                              </figure>
+                              <div class="media-content">
+                                <div class="content">
+                                  <p>
+                                    <strong>Claire San Juan-Tayco</strong> <small>francesclaire.tayco@cirrolytix.com</small>
+                                    <br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                  </p>
+                                </div>
+                                <nav class="level is-mobile">
+                                  <div class="level-left">
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                    </a>
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                    </a>
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                    </a>
+                                  </div>
+                                </nav>
+                              </div>
+                              <div class="media-right">
+                                <button class="fa fa-linkedin"></button>
+                              </div>
+                            </article>
+                          </section>
+                        </div>
+                        <div class="column is-three-quarters">
+                          <section class="block">
+                            <article class="media">
+                              <figure class="media-left">
+                                <p class="image is-64x64">
+                                  <img src="assets/author_jansen.jpg">
+                                </p>
+                              </figure>
+                              <div class="media-content">
+                                <div class="content">
+                                  <p>
+                                    <strong>Jansen Lopez</strong> <small>jansen.lopez@cirrolytix.com</small>
+                                    <br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                  </p>
+                                </div>
+                                <nav class="level is-mobile">
+                                  <div class="level-left">
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                    </a>
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                    </a>
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                    </a>
+                                  </div>
+                                </nav>
+                              </div>
+                              <div class="media-right">
+                                <button class="fa fa-linkedin"></button>
+                              </div>
+                            </article>
+                          </section>
+                        </div>
+                        <div class="column is-three-quarters">
+                          <section class="block">
+                            <article class="media">
+                              <figure class="media-left">
+                                <p class="image is-64x64">
+                                  <img src="assets/author_mark.jpg">
+                                </p>
+                              </figure>
+                              <div class="media-content">
+                                <div class="content">
+                                  <p>
+                                    <strong>Mark Toledo</strong> <small>mark.toledo@cirrolytix.com</small>
+                                    <br>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                  </p>
+                                </div>
+                                <nav class="level is-mobile">
+                                  <div class="level-left">
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
+                                    </a>
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
+                                    </a>
+                                    <a class="level-item">
+                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
+                                    </a>
+                                  </div>
+                                </nav>
+                              </div>
+                              <div class="media-right">
+                                <button class="fa fa-linkedin"></button>
+                              </div>
+                            </article>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              
             </section>
             
           </main>
         </div>
       </div>
+      <script src="js/Chart.bundle.js"></script>
+      <script src="js/charting.js"></script>
+      <script src="js/mapping.js"></script>
       <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZG9jbGlnb3QiLCJhIjoiY2p3MHQ5MTViMGVvNzQzdGdicTlwM2o3NCJ9.j4qYChJYSxUy8hNnlXrD-g';
 
-        var map = new mapboxgl.Map({
-          container: 'map', // HTML container id
-          style: 'mapbox://styles/mapbox/satellite-streets-v10', // style URL
-          center: [121.065044, 14.575057], // starting position as [lng, lat]
-          zoom: 14
-        });
+        // function updateBarContent(divSelect) {
+        //   var xmlhttp = new XMLHttpRequest();
+        //   xmlhttp.onreadystatechange = function() {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //       document.getElementById("barContentDiv").innerHTML = '&nbsp;';
+        //       document.getElementById("barContentDiv").innerHTML = '<canvas id="barContentChart"></canvas>';
+        //       var chartString = this.responseText;
+        //       updateBarContentChart(chartString, divSelect); 
+        //       document.getElementById("barContentChartMsg").innerHTML = "";			
+        //     } else {
+        //       document.getElementById("barContentChartMsg").innerHTML = "Executing Query...";
+        //     }
+        //   };
+        //   xmlhttp.open("GET", "data/content_bar.php?divSelect="+ encodeURIComponent(divSelect), true);
+        //   xmlhttp.send();
+        // }
 
-        map.addControl(new mapboxgl.NavigationControl());
-
-        var popup = [];
-        var marker = [];
-        var messages = [];
-        var locations = [];
-        var colors = [];
-        var descriptions = [];
         
-        messages.push('<h3>Edsa Shangri-la</h3><p>St. Francis</p>');
-        messages.push('<h3>The Podium</h3><p>Ortigas</p>');
-        messages.push('<h3>Buffalo Wild Wings</h3><p>Estancia</p>');
-        messages.push('<h3>Oriental Pearl</h3><p>Kapitolyo</p>');
-        messages.push('<h3>ActivAsia Inc.</h3><p>Oranbo Drive</p>');
-        messages.push('<h3>Pioneer Center</h3><p>Kapitolyo</p>');
-        messages.push('<h3>Greenfield Park</h3><p>Greenfield</p>');
-        messages.push('<h3>Puregold</h3><p>Shaw Blvd</p>');
-        messages.push('<h3>Palawan Base</h3><p>Visayas</p>');
-        descriptions.push('<p>A premier hotel under the Shangri-la group.</p>');
-        descriptions.push('<p>An upscale mall managed by the SM group.</p>');
-        descriptions.push('<p>Sports-bar specializing in various recipes of Buffalo Wings.</p>');
-        descriptions.push('<p>Original cantonese cuisine.</p>');
-        descriptions.push('<p>Spreading Happiness.</p>');
-        descriptions.push('<p>A discount supermarket.</p>');
-        descriptions.push('<p>Activity center with various restaurants.</p>');
-        descriptions.push('<p>Mass supermarket chain.</p>');
-        descriptions.push('<p>Somewhere near China.</p>');
-        locations.push([121.057011, 14.581450]);
-        locations.push([121.059642, 14.585015]);
-        locations.push([121.062990, 14.575440]); 
-        locations.push([121.055917, 14.568948]); 
-        locations.push([121.065044, 14.575057]); 
-        locations.push([121.057912, 14.573958]); 
-        locations.push([121.054066, 14.579283]); 
-        locations.push([121.042074, 14.588920]); 
-        locations.push([118.785242, 9.967638]); 	
-        colors.push({ "color": "#b40219" });
-        colors.push({ "color": "#ff0219" });
-        colors.push({ "color": "#ffff66" });
-        colors.push({ "color": "#66ffff" });
-        colors.push({ "color": "#ff66ff" });
-        colors.push({ "color": "#ff6666" });
-        colors.push({ "color": "#6666ff" });
-        colors.push({ "color": "#ff66ff" });
-        colors.push({ "color": "#ff66ff" });
-        
-        for (i = 0; i < locations.length; i++) {
-          popup[i] = new mapboxgl.Popup()
-          .setHTML(messages[i]);
 
-          marker[i] = new mapboxgl.Marker(colors[i])
-          .setLngLat(locations[i])
-          .setPopup(popup[i])
-          .addTo(map);
-        }
-
-        function goToPoint(locationValue) {
-          if (locationValue) {
-            map.flyTo({center: locations[locationValue]});
-            renderInfo(locationValue);
-          } else {
-            map.flyTo({center: [121.065044, 14.575057]});
-            document.getElementById('renderWindow').innerHTML = '';
-          }
-        }
         
-        function renderInfo(locationValue) {
-          document.getElementById('renderWindow').innerHTML = messages[locationValue] + descriptions[locationValue];
-        }
+
+
+        
 
         document.getElementById('dashboard').addEventListener('click', dashboardChange)
+        document.getElementById('project').addEventListener('click', dashboardChange)
         document.getElementById('search').addEventListener('click', dashboardChange)
-        document.getElementById('location').addEventListener('click', dashboardChange)
+        document.getElementById('models').addEventListener('click', dashboardChange)
+        document.getElementById('mapping').addEventListener('click', dashboardChange)
+        document.getElementById('github').addEventListener('click', dashboardChange)
+        document.getElementById('presentation').addEventListener('click', dashboardChange)
+        document.getElementById('authors').addEventListener('click', dashboardChange)
 
+        // page_0 - project
+        // page_1 - dashboard
+        // page_2 - search
+        // page_3 - models
+        // page_4 - mapping
+        // page_5 - github
+        // page_6 - presentation
+        // page_7 - authors
 
         function dashboardChange(){
           var id = this.id
-          if(id == "dashboard"){
-            document.getElementById('dashboard').classList.add("is-active")
+          if(id == "project"){
+            document.getElementById('project_list').classList.toggle("is-hidden")
+            document.getElementById('dashboard').classList.remove("is-active")
+            document.getElementById('project').classList.add("is-active")
             document.getElementById('search').classList.remove("is-active")
-            document.getElementById('location').classList.remove("is-active")
+            document.getElementById('models').classList.remove("is-active")
+            document.getElementById('mapping').classList.remove("is-active")
+            document.getElementById('github').classList.remove("is-active")
+            document.getElementById('presentation').classList.remove("is-active")
+            document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('page_0').classList.remove("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
+          } else if(id == "dashboard"){
+            document.getElementById('dashboard').classList.add("is-active")
+            document.getElementById('project').classList.remove("is-active")
+            document.getElementById('search').classList.remove("is-active")
+            document.getElementById('models').classList.remove("is-active")
+            document.getElementById('mapping').classList.remove("is-active")
+            document.getElementById('github').classList.remove("is-active")
+            document.getElementById('presentation').classList.remove("is-active")
+            document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.remove("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
+          }  else if (id == "search"){
+            document.getElementById('dashboard').classList.remove("is-active")
+            document.getElementById('project').classList.remove("is-active")
+            document.getElementById('search').classList.add("is-active")
+            document.getElementById('models').classList.remove("is-active")
+            document.getElementById('mapping').classList.remove("is-active")
+            document.getElementById('github').classList.remove("is-active")
+            document.getElementById('presentation').classList.remove("is-active")
+            document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
             document.getElementById('page_2').classList.remove("is-hidden")
             document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
-          } else if (id == "search"){
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
+          } else if (id == "models"){
             document.getElementById('dashboard').classList.remove("is-active")
-            document.getElementById('search').classList.add("is-active")
-            document.getElementById('location').classList.remove("is-active")
+            document.getElementById('project').classList.remove("is-active")
+            document.getElementById('search').classList.remove("is-active")
+            document.getElementById('models').classList.add("is-active")
+            document.getElementById('mapping').classList.remove("is-active")
+            document.getElementById('github').classList.remove("is-active")
+            document.getElementById('presentation').classList.remove("is-active")
+            document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
             document.getElementById('page_2').classList.add("is-hidden")
             document.getElementById('page_3').classList.remove("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
-          } else if (id == "location"){
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
+          } else if (id == "mapping"){
             document.getElementById('dashboard').classList.remove("is-active")
+            document.getElementById('project').classList.remove("is-active")
             document.getElementById('search').classList.remove("is-active")
-            document.getElementById('location').classList.add("is-active")
+            document.getElementById('models').classList.remove("is-active")
+            document.getElementById('mapping').classList.add("is-active")
+            document.getElementById('github').classList.remove("is-active")
+            document.getElementById('presentation').classList.remove("is-active")
+            document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
             document.getElementById('page_2').classList.add("is-hidden")
             document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.remove("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
+          } else if (id == 'github') {
+            document.getElementById('dashboard').classList.remove("is-active")
+            document.getElementById('project').classList.remove("is-active")
+            document.getElementById('search').classList.remove("is-active")
+            document.getElementById('models').classList.remove("is-active")
+            document.getElementById('mapping').classList.remove("is-active")
+            document.getElementById('github').classList.add("is-active")
+            document.getElementById('presentation').classList.remove("is-active")
+            document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.remove("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
+          } else if (id == 'presentation'){
+            document.getElementById('dashboard').classList.remove("is-active")
+            document.getElementById('project').classList.remove("is-active")
+            document.getElementById('search').classList.remove("is-active")
+            document.getElementById('models').classList.remove("is-active")
+            document.getElementById('mapping').classList.remove("is-active")
+            document.getElementById('github').classList.remove("is-active")
+            document.getElementById('presentation').classList.add("is-active")
+            document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.remove("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
           } 
+          else if (id == 'authors') {
+            document.getElementById('dashboard').classList.remove("is-active")
+            document.getElementById('project').classList.remove("is-active")
+            document.getElementById('search').classList.remove("is-active")
+            document.getElementById('models').classList.remove("is-active")
+            document.getElementById('mapping').classList.remove("is-active")
+            document.getElementById('github').classList.remove("is-active")
+            document.getElementById('presentation').classList.remove("is-active")
+            document.getElementById('authors').classList.add("is-active")
+            document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.remove("is-hidden")
+          }
         }
 
       </script>

@@ -17,9 +17,9 @@ Dengue is now at epidemic levels in the Philippines with over 271,000 cases and 
 We propose an automated information portal that correlates dengue cases and deaths with real-time data from climate, google searches, and satellite maps, giving an advance indicator of when dengue will emerge and potential dengue hotspot locations. This portal is accessible publicly but is targeted towards public health and local government agencies to give them advanced notice of dengue outbreaks and help prioritize resources.
 
 The service relies on 3 data sets:
-* Climate data from DOST-PAGASA
-* Google searches for 'dengue' and related terms
-* Satellite imaging data from NASA Landsat (Copernicus)
+* Satellite Data: Satellite imaging data from [Sentinel Online Copernicus](https://sentinel.esa.int/web/sentinel/sentinel-data-access)
+* Local Weather Data: Climate data from [DOST-PAGASA](http://bagong.pagasa.dost.gov.ph/climate/climatological-normals)
+* Google Data: [Search trends for 'dengue' and related terms](https://trends.google.com/trends/explore?date=today%205-y&geo=PH&q=dengue)
 
 To populate the information portal, we propose 3 models:
 * Predict dengue cases from climate and search data
@@ -53,8 +53,48 @@ Logically, the behavior captured by the datasets in our study is:
 
 Therefore by detecting #1 and #3 we can address and hopefully disrupt the disease cycle before an epidemic spreads.
 
+## Selecting Pilot Areas For Prototype
+
+For our initial prototype we decided to focus on four areas:
+
+* National Capital Region (Quezon City as a focus)
+* Eastern Visayas (Tacloban City as a focus)
+* Western Visayas (Iloilo City as a focus)
+* ARMM (Cotabato City as a focus)
+
+We selected the above areas due to availability of local weather station in these locations. We decided on NCR as a default and added the three other cities due to the observed spike in Google Searches for dengue related terms indicating possible prevailing public panic in these areas.
+
 ## Predicting Dengue Cases and Deaths
+
+We propose to forecast dengue cases and deaths using a combination of:
+
+* Climate Data: Average monthly temperature readings from local weather stations
+* Climate Data: Average monthly rainfall (precipitation) readings from local weather stations
+* Google Data: Search index for 'dengue', 'dengue symptoms', 'dengue cure', and 'dengue medicine'
+* Lagged values for Climate factors, Google data, and actual cases and deaths
 
 ## Surfacing Mosquito Hotspots From Satellite Data
 
-## Next Steps
+We propose calculating dengue hotspots from satellite images as the intersection of the following:
+
+* Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) to identify areas with vegetation.
+* Normalized Difference Water Index (NDWI) to identify areas with water.
+
+Combining the two indices and testing for various thresholds we can approximate areas that have stagnant water which are breeding grounds for mosquitoes.
+
+## Results
+
+We visualized the resulting models on a web interface for easy navigation. Check the prototype [here](http://aedesproject.org).
+
+The preliminary run of our forecast model shows we are able to approximate the trendmonth-to-date dengue cases (R2 0.67). We also visualized the dengue hotspots on an interactive map that can zoom down to street level for public health sector targeting.
+
+## Contact Us
+
+The AEDES team consists of the following: 
+
+* [Dominic Ligot](https://www.linkedin.com/in/docligot/), Team Lead
+* [Claire Tayco](https://www.linkedin.com/in/claire-san-juan-tayco-81361828/), Statistical Models
+* [Jansen Lopez](https://www.linkedin.com/in/jansen-lopez/), Geospatial Models
+* [Mark Toledo](https://www.linkedin.com/in/toledomark/), Data Engineer
+
+We welcome collaborators. Contact us via Linked-IN, or email us at support@cirrolytix.com.
