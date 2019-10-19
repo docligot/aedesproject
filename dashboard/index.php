@@ -25,7 +25,7 @@
             <a href="" class="navbar-item is--brand">
             <img class="navbar-brand-logo" src="assets/logo4.png" title="" style="">
             </a>
-            <a class="navbar-item is-tab is-hidden-mobile is-active"><span class="icon is-medium"><i class="fa fa-bullseye"></i></span>AEDES Project</a>
+            <a class="navbar-item is-tab is-hidden-mobile is-active"><span class="icon is-medium"><i class="fa fa-bullseye"></i></span >AEDES Project</a>
           </div>
           <div class="navbar-menu navbar-end" id="navMenu">
             <div class="navbar-item has-dropdown is-hoverable">
@@ -65,13 +65,13 @@
               </ul>
               <p class="menu-label">Dashboard</p>
                 <ul class="menu-list">
-                  <li><a id="dashboard" class="" href="#"><span class="icon is-small"><i class="fa fa-bar-chart"></i></span> Dashboard</a></li>
+                  <li  onclick='generateChart()'><a id="dashboard" class="" href="#"><span class="icon is-small"><i class="fa fa-bar-chart"></i></span> Dashboard</a></li>
                 </ul>
               <p class="menu-label">Research</p>
                 <ul class="menu-list">
                   <li><a id="search" class="" href="#"><span class="icon is-small"><i class="fa fa-search"></i></span> Search</a></li>
                   <li><a id="models" class="" href="#"><span class="icon is-small"><i class="fa fa-cogs"></i></span> Models</a></li>
-                  <li><a id="mapping" class="" href="#"><span class="icon is-small"><i class="fa fa-map-marker"></i></span> Mapping</a></li>
+                  <li onclick='generateMaps()'><a id="mapping" class="" href="#"><span class="icon is-small"><i class="fa fa-map-marker"></i></span> Mapping</a></li>
                 </ul>
               <p class="menu-label">References</p>
                 <ul class="menu-list">
@@ -102,13 +102,13 @@
                   </div>
                 </div>
               </div> -->
-              <div id="page_0" class="columns is-multiline">
+              <div id="page_0" name="project" class="columns is-multiline">
                 <span id="aedes_1"></span>
                 <div class="column is-full">
                   <section class="hero">
                     <div class="hero-body">
                       <div class="container">
-                        <h1 class="title is-2">
+                        <h1 class="title is-2 has-text-centered">
                           <i class="fa fa-bullseye"></i> AEDES Project
                         </h1>
                         <!-- <h2 class="subtitle">
@@ -345,10 +345,10 @@
                             We have conducted research and cite the following prior work that provide the foundation for this solution: 
                             <div class="content">
                               <ol type="i">
-                                <li>In Caro, et. al. (2016), "Forecasting and Data Visualization of Dengue spread in the Philippine Visayas Island group", researchers proposed a method to predict dengue cases in the Visayas regions through the use of an Artificial Neural Network (ANN) which predicted dengue cases (R 0.8) through the use of climate data (temperature and rainfall) and a lagged number of previous dengue cases. </li>
-                                <li>In Yang, et. al. (2016), "Advances in using Internet searches to track dengue", researchers used Google searches for 'dengue' and related keywords to predict dengue cases in Mexico, Brazil, Thailand, Singapore and Taiwan. </li>
-                                <li>In Chua, Tan, et. al. (2018), "Project Project Still Water", researchers proposed a methodology to detect dengue hotspots using FAPAR (Vegetation) and NDWI (Water) areas. </li>
-                                <li>In Chan, Johnson (2012), "The Incubation Periods of Dengue Viruses", researchers establish the incubation periods for dengue. 95% of EIPs are between 5 and 33 days at 25C, and 2 and 15 days at30C, with means of 15 and 6.5 days, respectively which suggests that climate has an effect on the incubation of the disease. </li>
+                                <li><b>In Caro, et. al. (2016)</b>, "<a href="https://github.com/aedesproject/nasa_hack/blob/master/literature/07785420%20-%20Forecasting%20and%20Data%20Visualization%20of%20Dengue%20Spread%20in%20PH%20Visayas.pdf" target="_blank">Forecasting and Data Visualization of Dengue spread in the Philippine Visayas Island group</a>", researchers proposed a method to predict dengue cases in the Visayas regions through the use of an Artificial Neural Network (ANN) which predicted dengue cases (R 0.8) through the use of climate data (temperature and rainfall) and a lagged number of previous dengue cases. </li>
+                                <li><b>In Yang, et. al. (2016)</b>, "<a href="https://github.com/aedesproject/nasa_hack/blob/master/literature/Advances_in_using_Internet_searches_to_track_dengu.pdf" target="_blank">Advances in using Internet searches to track dengue</a>", researchers used Google searches for 'dengue' and related keywords to predict dengue cases in Mexico, Brazil, Thailand, Singapore and Taiwan. </li>
+                                <li><b>In Chua, Tan, et. al. (2018)</b>, "<a href="https://github.com/aedesproject/nasa_hack/blob/master/literature/Stagnant%20Water%20Maps%20from%20Satellite%20Infrared%20Data.pdf" target="_blank">Project Project Still Water</a>", researchers proposed a methodology to detect dengue hotspots using FAPAR (Vegetation) and NDWI (Water) areas. </li>
+                                <li><b>In Chan, Johnson (2012)</b>, "<a href="https://github.com/aedesproject/nasa_hack/blob/master/literature/Incubation-Dengue-pone.0050972.pdf" target="_blank">The Incubation Periods of Dengue Viruses</a>", researchers establish the incubation periods for dengue. 95% of EIPs are between 5 and 33 days at 25C, and 2 and 15 days at30C, with means of 15 and 6.5 days, respectively which suggests that climate has an effect on the incubation of the disease. </li>
                               </ol>
                             </div>
                           </h2>
@@ -453,7 +453,7 @@
                   </section>
                 </div>
               </div>
-              <div id="page_1" class="columns is-multiline">
+              <!-- <div id="page_1" class="columns is-multiline">
                 <div class="column">
                   <div class="box notification is-primary">
                     <div class="heading">Top Seller Total</div>
@@ -558,62 +558,35 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div id="page_2" class="columns is-multiline">
-                <div class="column is-full">
-                  <div class="container">
-                    <h1 class="title is-2">
-                      Mapping
-                    </h1>
-                  </div>
-                </div>
-                <div class="column is-full">
-                  <article class="message is-dark">
-                    <div class="message-header">Quezon City</div>
-                    <div class="message-body">
-                      <div id='map3' style='height: 400px;'></div>
-                      <div id='marker3'></div>
+              </div> -->
+              <div id="page_1" name="dashboard" class="columns is-hidden is-multiline">
+              <div class="column is-full">
+                  <section class="hero">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title is-2">
+                          Dashboard
+                        </h1>
+                        <hr>
+                        <section class="block">
+                          <article class="message is-dark">
+                            <div class="message-header">Google Searches</div>
+                            <div class="message-body">
+                              <div id="barHeadDiv">
+                                <canvas id="barContentDiv" style="height: 400px;"></canvas>
+                              </div>
+                            </div>
+                          </article>
+                        </section>
+                      </div>
                     </div>
-                  </article>
-                </div>
-                <div class="column is-6">
-                  <article class="message is-dark">
-                    <div class="message-header">Iloilo</div>
-                    <div class="message-body">
-                      <div id='map2' style='height: 400px;'></div>
-                      <div id='marker2'></div>
-                    </div>
-                  </article>
-                </div>
-                <div class="column is-6">
-                  <article class="message is-dark">
-                    <div class="message-header">Dagupan</div>
-                    <div class="message-body">
-                      <div id='map6' style='height: 400px;'></div>
-                      <div id='marker6'></div>
-                    </div>
-                  </article>
-                </div>
-                <div class="column is-6">
-                  <article class="message is-dark">
-                    <div class="message-header">Tacloban</div>
-                    <div class="message-body">
-                      <div id='map4' style='height: 400px;'></div>
-                      <div id='marker4'></div>
-                    </div>
-                  </article>
-                </div>
-                <div class="column is-6">
-                  <article class="message is-dark">
-                    <div class="message-header">Cotabato</div>
-                    <div class="message-body">
-                      <div id='map5' style='height: 400px;'></div>
-                      <div id='marker5'></div>
-                    </div>
-                  </article>
+                  </section>
+                </div>  
+              <div class="column is-full">
+                  
                 </div>
               </div>
-              <div id="page_3" class="columns is-multiline">
+              <div id="page_2" name="search" class="columns is-hidden is-multiline">
                 <div class="field has-addons">
                   <div class="control">
                     <input class="input" type="text" placeholder="Find a repository">
@@ -922,35 +895,13 @@
                   </tbody>
                 </table>
               </div>
-              <div id="page_4" class="columns is-multiline">
-                <div class="column is-quarter select">
-                  <select onchange="goToPoint(this.value);">
-                    <option value=''>Select Location:</option>
-                    <option value=0>Edsa Shangri-la</option>
-                    <option value=1>The Podium</option>
-                    <option value=2>Buffalo Wild Wings</option>
-                    <option value=3>Oriental Pearl</option>
-                    <option value=4>ActivAsia Inc.</option>
-                    <option value=5>Pioneer Center</option>
-                    <option value=6>Greenfield</option>
-                    <option value=7>Puregold</option>
-                    <option value=8>Hideout</option>
-                  </select>
-
-                  <div id="renderWindow"></div>
-                </div>
-                <div class="column is-three-quarters">
-                  <div id='map' style='height: 400px;'></div>
-                  <div id='marker1'></div>
-                </div>
-              </div>
-              <div id="page_5" class="columns is-multiline">
+              <div id="page_3" name="models" class="columns is-hidden is-multiline">
                 <div class="column is-full">
                   <section class="hero">
                     <div class="hero-body">
                       <div class="container">
                         <h1 class="title is-2">
-                          Researchers
+                          Models
                         </h1>
                         <hr>
                         <section class="block">
@@ -966,7 +917,105 @@
                   </section>
                 </div>
               </div>
-              <div id="page_6" class="columns is-multiline">
+              <div id="page_4" name="mapping" class="columns is-hidden is-multiline">
+                <div class="column is-full">
+                  <div class="container">
+                    <h1 class="title is-2">
+                      Mapping
+                    </h1>
+                  </div>
+                </div>
+                <div class="column is-full">
+                  <article class="message is-dark">
+                    <div class="message-header">Quezon City</div>
+                    <div class="message-body">
+                      <div id='map3'></div>
+                      <div id='marker3'></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="column is-6">
+                  <article class="message is-dark">
+                    <div class="message-header">Iloilo</div>
+                    <div class="message-body">
+                      <div id='map2'></div>
+                      <div id='marker2'></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="column is-6">
+                  <article class="message is-dark">
+                    <div class="message-header">Dagupan</div>
+                    <div class="message-body">
+                      <div id='map6'></div>
+                      <div id='marker6'></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="column is-6">
+                  <article class="message is-dark">
+                    <div class="message-header">Tacloban</div>
+                    <div class="message-body">
+                      <div id='map4'></div>
+                      <div id='marker4'></div>
+                    </div>
+                  </article>
+                </div>
+                <div class="column is-6">
+                  <article class="message is-dark">
+                    <div class="message-header">Cotabato</div>
+                    <div class="message-body">
+                      <div id='map5'></div>
+                      <div id='marker5'></div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div id="page_5" name="github" class="columns is-hidden is-multiline">
+                <div class="column is-full">
+                  <section class="hero">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title is-2">
+                          Github
+                        </h1>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Test
+                          </h2>
+                          <h2 class="block">
+                            Test 
+                          </h2>
+                        </section>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div id="page_6" name="presentation" class="columns is-hidden is-multiline">
+                <div class="column is-full">
+                  <section class="hero">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title is-2">
+                          Presentation
+                        </h1>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Test
+                          </h2>
+                          <h2 class="block">
+                            Test 
+                          </h2>
+                        </section>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              <div id="page_7" name="authors" class="columns is-hidden is-multiline">
                 <div class="column is-full">
                   <section class="hero">
                     <div class="hero-body">
@@ -1124,18 +1173,7 @@
                   </section>
                 </div>
               </div>
-              <div id="page_7" class="columns is-multiline">
-                <div class="column is-full">
-                  <article class="message is-dark">
-                    <div class="message-header">Chart</div>
-                    <div class="message-body">
-                      <div id="barHeadDiv">
-                        <canvas id="barContentDiv" style="height: 400px;"></canvas>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </div>
+              
             </section>
             
           </main>
@@ -1179,20 +1217,18 @@
         document.getElementById('presentation').addEventListener('click', dashboardChange)
         document.getElementById('authors').addEventListener('click', dashboardChange)
 
+        // page_0 - project
+        // page_1 - dashboard
+        // page_2 - search
+        // page_3 - models
+        // page_4 - mapping
+        // page_5 - github
+        // page_6 - presentation
+        // page_7 - authors
 
         function dashboardChange(){
           var id = this.id
-          if(id == "dashboard"){
-            document.getElementById('dashboard').classList.add("is-active")
-            document.getElementById('project').classList.remove("is-active")
-            document.getElementById('search').classList.remove("is-active")
-            document.getElementById('models').classList.remove("is-active")
-            document.getElementById('mapping').classList.remove("is-active")
-            document.getElementById('github').classList.remove("is-active")
-            document.getElementById('presentation').classList.remove("is-active")
-            document.getElementById('authors').classList.remove("is-active")
-            document.getElementById('project_list').classList.add("is-hidden")
-          } else if(id == "project"){
+          if(id == "project"){
             document.getElementById('project_list').classList.toggle("is-hidden")
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.add("is-active")
@@ -1202,6 +1238,32 @@
             document.getElementById('github').classList.remove("is-active")
             document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('page_0').classList.remove("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
+          } else if(id == "dashboard"){
+            document.getElementById('dashboard').classList.add("is-active")
+            document.getElementById('project').classList.remove("is-active")
+            document.getElementById('search').classList.remove("is-active")
+            document.getElementById('models').classList.remove("is-active")
+            document.getElementById('mapping').classList.remove("is-active")
+            document.getElementById('github').classList.remove("is-active")
+            document.getElementById('presentation').classList.remove("is-active")
+            document.getElementById('authors').classList.remove("is-active")
+            document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.remove("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
           }  else if (id == "search"){
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
@@ -1212,6 +1274,14 @@
             document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.remove("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
           } else if (id == "models"){
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
@@ -1222,6 +1292,14 @@
             document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.remove("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
           } else if (id == "mapping"){
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
@@ -1232,6 +1310,14 @@
             document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.remove("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
           } else if (id == 'github') {
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
@@ -1242,6 +1328,14 @@
             document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.remove("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
           } else if (id == 'presentation'){
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
@@ -1252,6 +1346,14 @@
             document.getElementById('presentation').classList.add("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.remove("is-hidden")
+            document.getElementById('page_7').classList.add("is-hidden")
           } 
           else if (id == 'authors') {
             document.getElementById('dashboard').classList.remove("is-active")
@@ -1263,6 +1365,14 @@
             document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.add("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('page_0').classList.add("is-hidden")
+            document.getElementById('page_1').classList.add("is-hidden")
+            document.getElementById('page_2').classList.add("is-hidden")
+            document.getElementById('page_3').classList.add("is-hidden")
+            document.getElementById('page_4').classList.add("is-hidden")
+            document.getElementById('page_5').classList.add("is-hidden")
+            document.getElementById('page_6').classList.add("is-hidden")
+            document.getElementById('page_7').classList.remove("is-hidden")
           }
         }
 
