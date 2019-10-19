@@ -1,5 +1,9 @@
 # Welcome to the AEDES Project
 
+## Prototype
+
+Check the dashboard [here](http://aedesproject.org). 
+
 ## Our Challenge
 
 AEDES is tackling the SMASH YOUR SDGs challenge under the LIVING IN OUR WORLD category. Specifically we are tackling Goal 3: GOOD HEALTH AND WELL BEING under the UN Sustainable Development Goals.
@@ -48,3 +52,9 @@ Logically, the behavior captured by the datasets in our study is:
 5. Cases and deaths are reported to public health officials
 
 Therefore by detecting #1 and #3 we can address and hopefully disrupt the disease cycle before an epidemic spreads.
+
+## Predicting Dengue Cases and Deaths
+
+## Surfacing Mosquito Hotspots From Satellite Data
+
+## Next Steps
