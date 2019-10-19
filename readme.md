@@ -1,4 +1,4 @@
-This is the github of Project Aedes. 
+﻿This is the github of Project Aedes. 
 
 ## Our Challenge
 
@@ -29,10 +29,10 @@ By doing this we are addressing 2 key challenges for public health and local gov
 ## Related Literature
 
 We have conducted research and cite the following prior work that provide the foundation for this solution:
-* In Caro, et. al. (2016), "Forecasting and Data Visualization of Dengue spread in the Philippine Visayas Island group", researchers proposed a method to predict dengue cases in the Visayas regions through the use of an Artificial Neural Network (ANN) which predicted dengue cases (R 0.8) through the use of climate data (temperature and rainfall) and a lagged number of previous dengue cases.
-* In Yang, et. al. (2016), "Advances in using Internet searches to track dengue", researchers used Google searches for 'dengue' and related keywords to predict dengue cases in Mexico, Brazil, Thailand, Singapore and Taiwan.
-* In Chua, Tan, et. al. (2018), "Project Project Still Water", researchers proposed a methodology to detect dengue hotspots using FAPAR (Vegetation) and NDWI (Water) areas.
-* In Chan, Johnson (2012), "The Incubation Periods of Dengue Viruses", researchers establish the incubation periods for dengue. 95% of EIPs are between 5 and 33 days at 25C, and 2 and 15 days at30C, with means of 15 and 6.5 days, respectively which suggests that climate has an effect on the incubation of the disease.
+* In Caro, et. al. (2016), "*Forecasting and Data Visualization of Dengue spread in the Philippine Visayas Island group*", researchers proposed a method to predict dengue cases in the Visayas regions through the use of an Artificial Neural Network (ANN) which predicted dengue cases (R 0.8) through the use of climate data (temperature and rainfall) and a lagged number of previous dengue cases.
+* In Yang, et. al. (2016), "*Advances in using Internet searches to track dengue*", researchers used Google searches for 'dengue' and related keywords to predict dengue cases in Mexico, Brazil, Thailand, Singapore and Taiwan.
+* In Chua, Tan, et. al. (2018), "*Project Still Water*", researchers proposed a methodology to detect dengue hotspots using FAPAR (Vegetation) and NDWI (Water) areas.
+* In Chan, Johnson (2012), "*The Incubation Periods of Dengue Viruses*", researchers establish the incubation periods for dengue. 95% of EIPs are between 5 and 33 days at 25C, and 2 and 15 days at30C, with means of 15 and 6.5 days, respectively which suggests that climate has an effect on the incubation of the disease.
 
 ## Objectives and Principles
 
