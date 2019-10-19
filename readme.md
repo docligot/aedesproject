@@ -86,7 +86,7 @@ Combining the two indices and testing for various thresholds we can approximate 
 
 We visualized the resulting models on a web interface for easy navigation. Check the prototype [here](http://aedesproject.org).
 
-The preliminary run of our forecast model shows we are able to approximate the trendmonth-to-date dengue cases (R2 0.67). We also visualized the dengue hotspots on an interactive map that can zoom down to street level for public health sector targeting.
+The preliminary run of our forecast model shows we are able to approximate the trendmonth-to-date dengue cases (R 0.82). We also visualized the dengue hotspots on an interactive map that can zoom down to street level for public health sector targeting.
 
 ## Contact Us
 
