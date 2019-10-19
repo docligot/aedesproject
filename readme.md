@@ -1,4 +1,4 @@
-﻿This is the github of Project Aedes. 
+# Welcome to the AEDES Project
 
 ## Our Challenge
 
