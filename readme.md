@@ -87,3 +87,14 @@ Combining the two indices and testing for various thresholds we can approximate 
 We visualized the resulting models on a web interface for easy navigation. Check the prototype [here](http://aedesproject.org).
 
 The preliminary run of our forecast model shows we are able to approximate the trendmonth-to-date dengue cases (R2 0.67). We also visualized the dengue hotspots on an interactive map that can zoom down to street level for public health sector targeting.
+
+## Contact Us
+
+The AEDES team consists of the following: 
+
+* [Dominic Ligot](https://www.linkedin.com/in/docligot/), Team Lead
+* [Claire Tayco](https://www.linkedin.com/in/claire-san-juan-tayco-81361828/), Statistical Models
+* [Jansen Lopez](https://www.linkedin.com/in/jansen-lopez/), Geospatial Models
+* [Mark Toledo](https://www.linkedin.com/in/toledomark/), Data Engineer
+
+We welcome collaborators. Contact us via Linked-IN, or email us at support@cirrolytix.com.
