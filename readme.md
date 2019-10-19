@@ -1,5 +1,9 @@
 # Welcome to the AEDES Project
 
+## Prototype
+
+Check the dashboard [here](http://aedesproject.org). 
+
 ## Our Challenge
 
 AEDES is tackling the SMASH YOUR SDGs challenge under the LIVING IN OUR WORLD category. Specifically we are tackling Goal 3: GOOD HEALTH AND WELL BEING under the UN Sustainable Development Goals.
