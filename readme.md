@@ -1,12 +1,8 @@
 # Welcome to the AEDES Project
 
-## Prototype
-
-Check the dashboard [here](http://aedesproject.org). 
-
 ## Our Challenge
 
-AEDES is tackling the SMASH YOUR SDGs challenge under the LIVING IN OUR WORLD category. Specifically we are tackling Goal 3: GOOD HEALTH AND WELL BEING under the UN Sustainable Development Goals.
+AEDES is tackling the [SMASH YOUR SDGs](https://2019.spaceappschallenge.org/challenges/living-our-world/smash-your-sdgs/details) challenge under the [LIVING IN OUR WORLD](https://2019.spaceappschallenge.org/challenges/living-our-world/) category. Specifically we are tackling Goal 3: GOOD HEALTH AND WELL BEING under the UN Sustainable Development Goals.
 
 ## The Problem
 
