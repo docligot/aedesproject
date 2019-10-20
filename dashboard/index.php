@@ -22,9 +22,11 @@
       <div class="">
         <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
+            <button id="burger" class="is-pulled-right"><i class="fa fa-bars"></i></button>
             <a href="" class="navbar-item is--brand">
-            <img class="navbar-brand-logo" src="assets/logo4.png" title="" style="">
+              <img class="navbar-brand-logo" src="assets/logo4.png" title="" style="">
             </a>
+            
             <a class="navbar-item is-tab is-hidden-mobile is-active"><span class="icon is-medium"><i class="fa fa-bullseye"></i></span >AEDES Project</a>
           </div>
           <div class="navbar-menu navbar-end" id="navMenu">
@@ -46,9 +48,9 @@
     <body class="has-navbar-fixed-top">
       <div class="wrapper">
         <div class="columns">
-          <aside class="column is-2 aside ">
+          <aside id="sideBar" class="column is-2 aside ">
             <nav class="menu sticky">
-              <p class="menu-label">Home</p>
+              <span class="menu-label">Home</span>
               <ul class="menu-list">
                 <li><a id="project" class="is-active" href="#">
                   <span class="icon is-small"><i class="fa fa-info-circle"></i></span> What is Project AEDES?</a>
@@ -57,9 +59,16 @@
                     <li><a class="" href="#aedes_2">Our Challenge</a></li>
                     <li><a class="" href="#aedes_3">The Problem</a></li>
                     <li><a class="" href="#aedes_4">Our Solution</a></li>
-                    <li><a class="" href="#aedes_5">Correlating: Dengue Cases and Deaths</a></li>
-                    <li><a class="" href="#aedes_6">Related Literature</a></li>
-                    <li><a class="" href="#aedes_7">Objectives and Principles</a></li>
+                    <li><a class="" href="#aedes_5">Capturing The Dengue Data Cycle</a></li>
+                    <li><a class="" href="#aedes_6">Searches for Dengue: Epidemic of Panic </a></li>
+                    <li><a class="" href="#aedes_7">Predicting Dengue Cases and Deaths</a></li>
+                    <li><a class="" href="#aedes_8">Surfacing Mosquito Hotspots From Satellite Data </a></li>
+                    <li><a class="" href="#aedes_9">Results</a></li>
+                    <li><a class="" href="#aedes_10">Related Literature</a></li>
+                    <li><a class="" href="#aedes_11">Objectives and Principles</a></li>
+                    <li><a class="" href="#aedes_12">Selecting Pilot Areas For Prototype</a></li>
+                    <li><a class="" href="#aedes_13">Our Impact </a></li>
+                    <li><a class="" href="#aedes_14">Next Steps</a></li>
                   </ul>
                 </li>
               </ul>
@@ -81,7 +90,7 @@
                 </ul>
               <p class="menu-label">References</p>
                 <ul class="menu-list">
-                  <li><a id="github" class="" href="#"><span class="icon is-small"><i class="fa fa-github"></i></span> Github Link</a></li>
+                  <li><a id="github" class="" href="#"><span class="icon is-small"><i class="fa fa-file-code-o"></i></span> References</a></li>
                 </ul>
               <p class="menu-label">About The Authors</p>
                 <ul class="menu-list">
@@ -282,8 +291,9 @@
                             </div>
                           </h2>
                         </section>
-                        <span id="aedes_5"></span>
+                        <span id="aedes_4"></span>
                         <hr>
+                        <span id="aedes_5"></span>
                         <section class="block">
                           <div class="block">
                             <figure class="image">
@@ -291,7 +301,9 @@
                             </figure>
                           </div>
                         </section>
+                        <span id="aedes_6"></span>
                         <hr>
+                        
                         <section class="block">
                           <h2 class="title is-3">
                             Searches for Dengue: Epidemic of Panic
@@ -313,6 +325,7 @@
                             </article>
                           </section>
                         </section>
+                        <span id="aedes_7"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -331,6 +344,7 @@
                             </div>
                           </div>
                         </section>
+                        <span id="aedes_8"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -350,6 +364,7 @@
                             </h2>
                           </div>
                         </section>
+                        <span id="aedes_9"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -361,6 +376,7 @@
                               <h2 class="block">The preliminary run of our forecast model shows we are able to approximate the trendmonth-to-date dengue cases (R 0.82). We also visualized the dengue hotspots on an interactive map that can zoom down to street level for public health sector targeting. </h2>
                             
                         </section>
+                        <span id="aedes_10"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -397,7 +413,7 @@
                             </div>
                           </h2>
                         </section>
-                        <span id="aedes_6"></span>
+                        <span id="aedes_11"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -430,6 +446,7 @@
 
                           </h2>
                         </section>
+                        <span id="aedes_12"></span>
                         <hr>
                         <section class="block">
                         <h2 class="title is-3">
@@ -452,6 +469,7 @@
                             </h2>
                           </h2>
                         </section>
+                        <span id="aedes_13"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -465,7 +483,7 @@
                               </figure>
                             </div>
                             <div class="column is-half">
-                              <h1 class="title is-2 has-text-centered">
+                              <h1 class="title is-1 has-text-centered">
                                 For every single day we can reduce the lag in response time we save: 
                               </h1>
                               <div class="columns">
@@ -473,7 +491,7 @@
                                   <h2 class="title is-1 has-text-centered">
                                     5
                                   </h2>
-                                  <h2 class="subtitle is-3 has-text-centered">
+                                  <h2 class="subtitle is-2 has-text-centered">
                                     Lives
                                   </h2>
                                 </div>
@@ -481,7 +499,7 @@
                                   <h2 class="title is-1 has-text-centered">
                                     1,130
                                   </h2>
-                                  <h2 class="subtitle is-3 has-text-centered">
+                                  <h2 class="subtitle is-2 has-text-centered">
                                     New Cases
                                   </h2>
                                 </div>
@@ -490,6 +508,7 @@
                           </div>
                          </div>
                         </section>
+                        <span id="aedes_14"></span>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
@@ -626,7 +645,12 @@
                         <h1 class="title is-2">
                           Dashboard
                         </h1>
-                        
+                        <h1 class="content subtitle is-5">
+                          <ul>
+                            <li>The higher the cases of dengue reported, the higher the number of deaths expected.</li>
+                            <li>Leading indicators of dengue cases are average rainfall and Google searches for dengue fever and dengue symptoms.</li>
+                          </ol>
+                        </h1>
                         <hr>
                         <section class="block">
                           
@@ -639,18 +663,18 @@
                                 <p class="control">
                                   <span class="select">
                                     <select id="axis_1">
-                                      <option value="MTD_Cases">Month-to-Date Cases</option>
+                                      <option value="MTD_Cases" selected="selected">Month-to-Date Cases</option>
                                       <option value="MTD_Deaths">Month-to-Date Deaths</option>
-                                      <option value="Reg_Ave_Temp_NCR">Regular Average Temperature - NCR</option>
-                                      <option value="Reg_Ave_Rainfall_NCR">Regular Average Rainfall - NCR</option>
+                                      <option value="Reg_Ave_Temp_NCR">Average Temperature - NCR</option>
+                                      <option value="Reg_Ave_Rainfall_NCR">Average Rainfall - NCR</option>
                                       <option value="GTrend_Dengue">Google Trends Dengue</option>
                                       <option value="GTrend_Dengue_Fever">Google Trends Dengue Fever</option>
                                       <option value="GTrend_Dengue_Cure">Google Trends Dengue Cure</option>
                                       <option value="GTrend_Dengue_Med">Google Trends Dengue Medication</option>
                                       <option value="GTrend_Dengue_Sym">Google Trends Dengue Symptoms</option>
                                       <option value="Mort_Rate">Mortality Rate</option>
-                                      <option value="Pred_Cases_PctChg">Predicted Cases</option>
-                                      <option value="MTD_Cases_Fct">Month-to-Date Forecast</option>
+                                      <!-- <option value="Pred_Cases_PctChg">Predicted Cases</option> -->
+                                      <option value="MTD_Cases_Fct">Month-to-Date Cases Forecast</option>
                                     </select>
                                   </span>
                                 </p>
@@ -659,16 +683,16 @@
                                     <select id="axis_2">
                                       <option value="MTD_Cases">Month-to-Date Cases</option>
                                       <option value="MTD_Deaths">Month-to-Date Deaths</option>
-                                      <option value="Reg_Ave_Temp_NCR">Regular Average Temperature - NCR</option>
-                                      <option value="Reg_Ave_Rainfall_NCR">Regular Average Rainfall - NCR</option>
+                                      <option value="Reg_Ave_Temp_NCR">Average Temperature - NCR</option>
+                                      <option value="Reg_Ave_Rainfall_NCR">Average Rainfall - NCR</option>
                                       <option value="GTrend_Dengue">Google Trends Dengue</option>
                                       <option value="GTrend_Dengue_Fever">Google Trends Dengue Fever</option>
                                       <option value="GTrend_Dengue_Cure">Google Trends Dengue Cure</option>
                                       <option value="GTrend_Dengue_Med">Google Trends Dengue Medication</option>
                                       <option value="GTrend_Dengue_Sym">Google Trends Dengue Symptoms</option>
                                       <option value="Mort_Rate">Mortality Rate</option>
-                                      <option value="Pred_Cases_PctChg">Predicted Cases</option>
-                                      <option value="MTD_Cases_Fct">Month-to-Date Forecast</option>
+                                      <!-- <option value="Pred_Cases_PctChg">Predicted Cases</option> -->
+                                      <option value="MTD_Cases_Fct" selected="selected">Month-to-Date Cases Forecast</option>
                                     </select>
                                   </span>
                                 </p>
@@ -680,6 +704,16 @@
                               </div>
                             </div>
                           </article>
+                        </section>
+                        <section class="content">
+                          <ul>
+                            <li>Month-to-date Cases: Dengue cases reported within the month</li>
+                            <li>Month-to-date Deaths: Deaths from dengue reported within the month</li>
+                            <li>Average Temperature: Average of daily temperatures recorded in NCR weather stations for the month (in Celsius)</li>
+                            <li>Average Rainfall: Average of daily rainfall recorded in NCR weather stations for the month </li>
+                            <li>Google Trends: Scores are based on the absolute search volume for a dengue-related term, relative to the number of searches received by Google</li>
+                            <li>Mortality Rate: Month-to-date Deaths divided by Month-to-date Cases</li>
+                          </ol>
                         </section>
                       </div>
                     </div>
@@ -1026,6 +1060,13 @@
                     <h1 class="title is-2">
                       Mapping
                     </h1>
+                    <h1 class="content subtitle is-5">
+                      <ul>
+                        <li>The points in the map shows the stagnant water positions.</li>
+                        <li>The points were derived from the FAPAR(Vegetation Index) and the NDWI(Water Index) map.</li>
+                        <li>When a location hits a certain FAPAR and NDWI threshold it will be indicated the possibility of a stagnant water pool</li>
+                      </ul>
+                    </h1>
                   </div>
                 </div>
                 <div id="targetQC" class="column is-hidden is-full">
@@ -1080,12 +1121,15 @@
                     <div class="hero-body">
                       <div class="container">
                         <h1 class="title is-2">
-                          Github
+                          References
                         </h1>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
                             <i class="fa fa-github"></i> <a href="https://github.com/aedesproject/nasa_hack">AEDES Project</a>
+                          </h2>
+                          <h2 class="title is-3">
+                            <i class="fa fa-google"></i> <a href="https://drive.google.com/drive/folders/1nyWbERLM_eoZFGu2vUAEAK7iIknRukTP">Google Drive</a>
                           </h2>
                           <h2 class="block">
                             Collaborate with us on this project! 
@@ -1234,6 +1278,11 @@
       <script src="js/charting.js"></script>
       <script src="js/mapping.js"></script>
       <script>
+        document.getElementById('burger').addEventListener('click', hideSidebar)
+
+        function hideSidebar(){
+          document.getElementById('sideBar').classList.toggle('is-hidden')
+        }
 
         // function updateBarContent(divSelect) {
         //   var xmlhttp = new XMLHttpRequest();
