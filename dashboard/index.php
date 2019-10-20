@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="Project AEDES" />
+    <meta name="description" content="AEDES aims to improve public health response against dengue in the Philippines by predicting dengue cases from climate and digital data and pinpointing possible hotspots from satellite data." />
+    <meta name="keywords" content="philippines, satellite data, dengue, google searches, climate, fapar, ndwi, dominic ligot, claire tayco, mark toledo, jansen lopez" />
+    <meta property="og:url" content="http://aedesproject.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Project AEDES" />
+    <meta property="og:description" content="AEDES aims to improve public health response against dengue in the Philippines by predicting dengue cases from climate and digital data and pinpointing possible hotspots from satellite data." />
+    <meta property="og:image" content="slides/Slide1.PNG" />
+    <meta name="twitter:image" content="slides/Slide1.PNG" />
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project AEDES</title>
     <link rel="stylesheet" href="bulma.min.css">
