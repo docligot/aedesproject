@@ -65,20 +65,23 @@
               </ul>
               <p class="menu-label">Dashboard</p>
                 <ul class="menu-list">
-                  <li  onclick='generateChart()'><a id="dashboard" class="" href="#"><span class="icon is-small"><i class="fa fa-bar-chart"></i></span> Dashboard</a></li>
+                  <li><a id="dashboard" class="" href="#"><span class="icon is-small"><i class="fa fa-bar-chart"></i></span> Dashboard</a></li>
                 </ul>
-              <p class="menu-label">Research</p>
                 <ul class="menu-list">
-                  <li><a id="search" class="" href="#"><span class="icon is-small"><i class="fa fa-search"></i></span> Search</a></li>
-                  <li><a id="models" class="" href="#"><span class="icon is-small"><i class="fa fa-cogs"></i></span> Models</a></li>
-                  <li onclick='generateMaps()'><a id="mapping" class="" href="#"><span class="icon is-small"><i class="fa fa-map-marker"></i></span> Mapping</a></li>
+                  <!-- <li><a id="search" class="" href="#"><span class="icon is-small"><i class="fa fa-search"></i></span> Search</a></li> -->
+                  <!-- <li><a id="models" class="" href="#"><span class="icon is-small"><i class="fa fa-cogs"></i></span> Models</a></li> -->
+                  <li><a id="mapping" class="" href="#"><span class="icon is-small"><i class="fa fa-map-marker"></i></span> Mapping</a>
+                  <ul id="mapping_list" class="menu-list is-hidden">                    
+                    <li onclick='generateQuezonCity()'><a class="" href="#mapping_1">NCR - Quezon City</a></li>
+                    <li onclick='generateTacloban()'><a class="" href="#mapping_2">Eastern Visayas - Tacloban</a></li>
+                    <li onclick='generateIloilo()'><a class="" href="#mapping_3">Western Visayas - Iloilo</a></li>
+                    <li onclick='generateCotabato()'><a class="" href="#mapping_4">ARMM - Cotabato</a></li>
+                  </ul></li>
+                  
                 </ul>
               <p class="menu-label">References</p>
                 <ul class="menu-list">
                   <li><a id="github" class="" href="#"><span class="icon is-small"><i class="fa fa-github"></i></span> Github Link</a></li>
-                  <li><a id="presentation" class="" href="#">
-                    <span class="icon is-small"><i class="fa fa-file-powerpoint-o"></i></span> Presentation</a>
-                  </li>
                 </ul>
               <p class="menu-label">About The Authors</p>
                 <ul class="menu-list">
@@ -255,9 +258,9 @@
                             The service relies on 3 data sets:
                             <div class="content">
                               <ol type="i">
-                                <li>Climate data from DOST-PAGASA</li>
-                                <li>Google searches for 'dengue' and related terms</li>
-                                <li>Satellite imaging data from NASA Landsat (Copernicus)</li>
+                                <li>Global Data: Satellite imaging data from <a href="https://sentinel.esa.int/web/sentinel/sentinel-data-access">Sentinel Online Copernicus</a></li>
+                                <li>Local Data: Climate data from <a href="http://bagong.pagasa.dost.gov.ph/climate/climatological-normals">DOST-PAGASA</a></li>
+                                <li>Digital Data: <a href="https://trends.google.com/trends/explore?date=today%205-y&geo=PH&q=dengue">Google search trends</a> for 'dengue' and related terms</li>
                               </ol>
                             </div>
 
@@ -293,29 +296,70 @@
                           <h2 class="title is-3">
                             Searches for Dengue: Epidemic of Panic
                           </h2>
-                          <div class="block">
+                          <!-- <div class="block">
                             <figure class="image">
                               <img src="assets/denguesearches.jpg" alt="">
                             </figure>
+                          </div> -->
+                          <hr>
+                          <section class="block">
+                            <article class="message is-dark">
+                              <div class="message-header">Google Searches of Dengue-related Keywords</div>
+                              <div class="message-body">
+                                <div id="barHeadDiv">
+                                  <canvas id="barContentDiv" style="height: 400px;"></canvas>
+                                </div>
+                              </div>
+                            </article>
+                          </section>
+                        </section>
+                        <hr>
+                        <section class="block">
+                          <h2 class="title is-3">
+                            Predicting Dengue Cases and Deaths 
+                          </h2>
+                          <div class="block">
+                            We propose to forecast dengue cases and deaths using a combination of: 
+
+                            <div class="content">
+                              <ol type="i">
+                                <li>Climate Data: Average monthly temperature readings from local weather stations</li>
+                                <li>Climate Data: Average monthly rainfall (precipitation) readings from local weather stations</li>
+                                <li>Google Data: Search index for 'dengue', 'dengue symptoms', 'dengue cure', and 'dengue medicine'</li>
+                                <li>Lagged values for Climate factors, Google data, and actual cases and deaths</li>
+                              </ol>
+                            </div>
                           </div>
                         </section>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
-                            Correlating: Dengue Cases and Deaths
+                            Surfacing Mosquito Hotspots From Satellite Data
                           </h2>
                           <div class="block">
-                            Test
+                            We propose calculating dengue hotspots from satellite images as the intersection of the following: 
+                            
+                            <div class="content">
+                              <ol type="i">
+                                <li>Fraction of Absorbed Photosynthetically Active Radiation (FAPAR) to identify areas with vegetation.</li>
+                                <li>Normalized Difference Water Index (NDWI) to identify areas with water. </li>
+                              </ol>
+                            </div>
+                            <h2 class="block">
+                              Combining the two indices and testing for various thresholds we can approximate areas that have stagnant water which are breeding grounds for mosquitoes. 
+                            </h2>
                           </div>
                         </section>
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
-                            Finding Mosquito Hotpots From Satellite Images
+                            Results
                           </h2>
                           <div class="block">
-                            Test
-                          </div>
+                            We visualized the resulting models on a web interface for easy navigation. Check the prototype <a href="http://aedesproject.org/">here</a>. 
+                            
+                              <h2 class="block">The preliminary run of our forecast model shows we are able to approximate the trendmonth-to-date dengue cases (R 0.82). We also visualized the dengue hotspots on an interactive map that can zoom down to street level for public health sector targeting. </h2>
+                            
                         </section>
                         <hr>
                         <section class="block">
@@ -388,6 +432,28 @@
                         </section>
                         <hr>
                         <section class="block">
+                        <h2 class="title is-3">
+                          Selecting Pilot Areas For Prototype 
+                          </h2>
+                          <h2 class="block">
+                            For our initial prototype we decided to focus on four areas: 
+
+                            <div class="content">
+                              <ol type="i">
+                                <li>National Capital Region (Quezon City as a focus)</li>
+                                <li>Eastern Visayas (Tacloban City as a focus)</li>
+                                <li>Western Visayas (Iloilo City as a focus)</li>
+                                <li>ARMM (Cotabato City as a focus)</li>
+                              </ol>
+                            </div>
+
+                            <h2 class="block">
+                              We selected the above areas due to availability of local weather station in these locations. We decided on NCR as a default and added the three other cities due to the observed spike in Google Searches for dengue related terms indicating possible prevailing public panic in these areas. 
+                            </h2>
+                          </h2>
+                        </section>
+                        <hr>
+                        <section class="block">
                           <h2 class="title is-3">
                             Our Impact
                           </h2>
@@ -430,14 +496,7 @@
                             Next Steps
                           </h2>
                           <div class="block">
-                            <div class="content">
-                              <ol type="1">
-                                <li class="subtitle is-3">Complete time-series training for all regions</li>
-                                <li class="subtitle is-3">Add satellite data for all target regions</li>
-                                <li class="subtitle is-3">Recommend target areas for on the ground dengue case and deaths monitoring</li>
-                                <li class="subtitle is-3">Set future thresholds for dengue epidemics and short list areas that will be hit first</li>
-                              </ol>
-                            </div>
+                            We intend to solicit funding to help finish the application and populate climate data, search data, cases, deaths, and satellite views for all regions in the Philippines. We are committed to bringing the solution out for public use and bring it to the radar of the public health sector and we hope we can get NASA's support to help stem the existing dengue crisis. 
                           </div>
                         </section>
                         <hr>
@@ -560,20 +619,64 @@
                 </div>
               </div> -->
               <div id="page_1" name="dashboard" class="columns is-hidden is-multiline">
-              <div class="column is-full">
+                <div class="column is-full">
                   <section class="hero">
                     <div class="hero-body">
                       <div class="container">
                         <h1 class="title is-2">
                           Dashboard
                         </h1>
+                        
                         <hr>
                         <section class="block">
+                          
+                        </section>
+                        <section class="block">
                           <article class="message is-dark">
-                            <div class="message-header">Google Searches</div>
+                            <div class="message-header">
+                              <p>Dengue Model</p> 
+                              <div class="field has-addons has-addons-right">
+                                <p class="control">
+                                  <span class="select">
+                                    <select id="axis_1">
+                                      <option value="MTD_Cases">Month-to-Date Cases</option>
+                                      <option value="MTD_Deaths">Month-to-Date Deaths</option>
+                                      <option value="Reg_Ave_Temp_NCR">Regular Average Temperature - NCR</option>
+                                      <option value="Reg_Ave_Rainfall_NCR">Regular Average Rainfall - NCR</option>
+                                      <option value="GTrend_Dengue">Google Trends Dengue</option>
+                                      <option value="GTrend_Dengue_Fever">Google Trends Dengue Fever</option>
+                                      <option value="GTrend_Dengue_Cure">Google Trends Dengue Cure</option>
+                                      <option value="GTrend_Dengue_Med">Google Trends Dengue Medication</option>
+                                      <option value="GTrend_Dengue_Sym">Google Trends Dengue Symptoms</option>
+                                      <option value="Mort_Rate">Mortality Rate</option>
+                                      <option value="Pred_Cases_PctChg">Predicted Cases</option>
+                                      <option value="MTD_Cases_Fct">Month-to-Date Forecast</option>
+                                    </select>
+                                  </span>
+                                </p>
+                                <p class="control">
+                                  <span class="select">
+                                    <select id="axis_2">
+                                      <option value="MTD_Cases">Month-to-Date Cases</option>
+                                      <option value="MTD_Deaths">Month-to-Date Deaths</option>
+                                      <option value="Reg_Ave_Temp_NCR">Regular Average Temperature - NCR</option>
+                                      <option value="Reg_Ave_Rainfall_NCR">Regular Average Rainfall - NCR</option>
+                                      <option value="GTrend_Dengue">Google Trends Dengue</option>
+                                      <option value="GTrend_Dengue_Fever">Google Trends Dengue Fever</option>
+                                      <option value="GTrend_Dengue_Cure">Google Trends Dengue Cure</option>
+                                      <option value="GTrend_Dengue_Med">Google Trends Dengue Medication</option>
+                                      <option value="GTrend_Dengue_Sym">Google Trends Dengue Symptoms</option>
+                                      <option value="Mort_Rate">Mortality Rate</option>
+                                      <option value="Pred_Cases_PctChg">Predicted Cases</option>
+                                      <option value="MTD_Cases_Fct">Month-to-Date Forecast</option>
+                                    </select>
+                                  </span>
+                                </p>
+                              </div>
+                            </div>
                             <div class="message-body">
-                              <div id="barHeadDiv">
-                                <canvas id="barContentDiv" style="height: 400px;"></canvas>
+                              <div id="dengueHeadDiv">
+                                <canvas id="dengueForecastDiv" style="height: 400px;"></canvas>
                               </div>
                             </div>
                           </article>
@@ -586,7 +689,7 @@
                   
                 </div>
               </div>
-              <div id="page_2" name="search" class="columns is-hidden is-multiline">
+              <!-- <div id="page_2" name="search" class="columns is-hidden is-multiline">
                 <div class="field has-addons">
                   <div class="control">
                     <input class="input" type="text" placeholder="Find a repository">
@@ -894,8 +997,8 @@
                     </tr>
                   </tbody>
                 </table>
-              </div>
-              <div id="page_3" name="models" class="columns is-hidden is-multiline">
+              </div> -->
+              <!-- <div id="page_3" name="models" class="columns is-hidden is-multiline">
                 <div class="column is-full">
                   <section class="hero">
                     <div class="hero-body">
@@ -916,7 +1019,7 @@
                     </div>
                   </section>
                 </div>
-              </div>
+              </div> -->
               <div id="page_4" name="mapping" class="columns is-hidden is-multiline">
                 <div class="column is-full">
                   <div class="container">
@@ -925,7 +1028,7 @@
                     </h1>
                   </div>
                 </div>
-                <div class="column is-full">
+                <div id="targetQC" class="column is-hidden is-full">
                   <article class="message is-dark">
                     <div class="message-header">Quezon City</div>
                     <div class="message-body">
@@ -934,7 +1037,7 @@
                     </div>
                   </article>
                 </div>
-                <div class="column is-6">
+                <div id="targetIloilo" class="column is-hidden is-full">
                   <article class="message is-dark">
                     <div class="message-header">Iloilo</div>
                     <div class="message-body">
@@ -943,7 +1046,7 @@
                     </div>
                   </article>
                 </div>
-                <div class="column is-6">
+                <div id="targetDagupan" class="column is-hidden is-full">
                   <article class="message is-dark">
                     <div class="message-header">Dagupan</div>
                     <div class="message-body">
@@ -952,7 +1055,7 @@
                     </div>
                   </article>
                 </div>
-                <div class="column is-6">
+                <div id="targetTacloban" class="column is-hidden is-full">
                   <article class="message is-dark">
                     <div class="message-header">Tacloban</div>
                     <div class="message-body">
@@ -961,7 +1064,7 @@
                     </div>
                   </article>
                 </div>
-                <div class="column is-6">
+                <div id="targetCotabato" class="column is-hidden is-full">
                   <article class="message is-dark">
                     <div class="message-header">Cotabato</div>
                     <div class="message-body">
@@ -982,10 +1085,10 @@
                         <hr>
                         <section class="block">
                           <h2 class="title is-3">
-                            Test
+                            <i class="fa fa-github"></i> <a href="https://github.com/aedesproject/nasa_hack">AEDES Project</a>
                           </h2>
                           <h2 class="block">
-                            Test 
+                            Collaborate with us on this project! 
                           </h2>
                         </section>
                       </div>
@@ -993,7 +1096,7 @@
                   </section>
                 </div>
               </div>
-              <div id="page_6" name="presentation" class="columns is-hidden is-multiline">
+              <!-- <div id="page_6" name="presentation" class="columns is-hidden is-multiline">
                 <div class="column is-full">
                   <section class="hero">
                     <div class="hero-body">
@@ -1014,7 +1117,7 @@
                     </div>
                   </section>
                 </div>
-              </div>
+              </div> -->
               <div id="page_7" name="authors" class="columns is-hidden is-multiline">
                 <div class="column is-full">
                   <section class="hero">
@@ -1035,31 +1138,18 @@
                               <div class="media-content">
                                 <div class="content">
                                   <p>
-                                    <strong>Dominic Ligot</strong> <small>dominic.ligot@cirrolytix.com</small>
+                                    <strong class="title is-3">Dominic Ligot - Project Lead </strong>
                                     <br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                    <a class="fa fa-linkedin-square  title is-4" href="https://www.linkedin.com/in/docligot/"></a>
                                   </p>
                                 </div>
-                                <nav class="level is-mobile">
-                                  <div class="level-left">
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                                    </a>
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                                    </a>
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                                    </a>
-                                  </div>
-                                </nav>
                               </div>
                               <div class="media-right">
-                                <button class="fa fa-linkedin"></button>
                               </div>
                             </article>
                           </section>
                         </div>
+                        <hr>
                         <div class="column is-three-quarters">
                           <section class="block">
                             <article class="media">
@@ -1071,31 +1161,18 @@
                               <div class="media-content">
                                 <div class="content">
                                   <p>
-                                    <strong>Claire San Juan-Tayco</strong> <small>francesclaire.tayco@cirrolytix.com</small>
+                                    <strong class="title is-3">Claire San Juan-Tayco -  Statistical Models</strong>
                                     <br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                    <a class="fa fa-linkedin-square title is-4" href="https://www.linkedin.com/in/claire-san-juan-tayco-81361828/"></a>
                                   </p>
                                 </div>
-                                <nav class="level is-mobile">
-                                  <div class="level-left">
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                                    </a>
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                                    </a>
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                                    </a>
-                                  </div>
-                                </nav>
                               </div>
                               <div class="media-right">
-                                <button class="fa fa-linkedin"></button>
                               </div>
                             </article>
                           </section>
                         </div>
+                        <hr>
                         <div class="column is-three-quarters">
                           <section class="block">
                             <article class="media">
@@ -1107,31 +1184,18 @@
                               <div class="media-content">
                                 <div class="content">
                                   <p>
-                                    <strong>Jansen Lopez</strong> <small>jansen.lopez@cirrolytix.com</small>
+                                    <strong class="title is-3">Jansen Lopez - Geospatial Models</strong>
                                     <br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                    <a class="fa fa-linkedin-square title is-4" href="https://www.linkedin.com/in/jansen-lopez/"></a>
                                   </p>
                                 </div>
-                                <nav class="level is-mobile">
-                                  <div class="level-left">
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                                    </a>
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                                    </a>
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                                    </a>
-                                  </div>
-                                </nav>
                               </div>
                               <div class="media-right">
-                                <button class="fa fa-linkedin"></button>
                               </div>
                             </article>
                           </section>
                         </div>
+                        <hr>
                         <div class="column is-three-quarters">
                           <section class="block">
                             <article class="media">
@@ -1143,31 +1207,18 @@
                               <div class="media-content">
                                 <div class="content">
                                   <p>
-                                    <strong>Mark Toledo</strong> <small>mark.toledo@cirrolytix.com</small>
+                                    <strong class="title is-3">Mark Toledo - Software Engineer</strong>
                                     <br>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                    <a class="fa fa-linkedin-square title is-4" href="https://www.linkedin.com/in/toledomark/"></a>
                                   </p>
                                 </div>
-                                <nav class="level is-mobile">
-                                  <div class="level-left">
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-reply"></i></span>
-                                    </a>
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-retweet"></i></span>
-                                    </a>
-                                    <a class="level-item">
-                                    <span class="icon is-small"><i class="fa fa-heart"></i></span>
-                                    </a>
-                                  </div>
-                                </nav>
                               </div>
                               <div class="media-right">
-                                <button class="fa fa-linkedin"></button>
                               </div>
                             </article>
                           </section>
                         </div>
+                        <hr>
                       </div>
                     </div>
                   </section>
@@ -1210,11 +1261,11 @@
 
         document.getElementById('dashboard').addEventListener('click', dashboardChange)
         document.getElementById('project').addEventListener('click', dashboardChange)
-        document.getElementById('search').addEventListener('click', dashboardChange)
-        document.getElementById('models').addEventListener('click', dashboardChange)
+        // document.getElementById('search').addEventListener('click', dashboardChange)
+        // document.getElementById('models').addEventListener('click', dashboardChange)
         document.getElementById('mapping').addEventListener('click', dashboardChange)
         document.getElementById('github').addEventListener('click', dashboardChange)
-        document.getElementById('presentation').addEventListener('click', dashboardChange)
+        // document.getElementById('presentation').addEventListener('click', dashboardChange)
         document.getElementById('authors').addEventListener('click', dashboardChange)
 
         // page_0 - project
@@ -1230,148 +1281,157 @@
           var id = this.id
           if(id == "project"){
             document.getElementById('project_list').classList.toggle("is-hidden")
+            document.getElementById('mapping_list').classList.add("is-hidden")
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.add("is-active")
-            document.getElementById('search').classList.remove("is-active")
-            document.getElementById('models').classList.remove("is-active")
+            // document.getElementById('search').classList.remove("is-active")
+            // document.getElementById('models').classList.remove("is-active")
             document.getElementById('mapping').classList.remove("is-active")
             document.getElementById('github').classList.remove("is-active")
-            document.getElementById('presentation').classList.remove("is-active")
+            // document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('page_0').classList.remove("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
-            document.getElementById('page_2').classList.add("is-hidden")
-            document.getElementById('page_3').classList.add("is-hidden")
+            // document.getElementById('page_2').classList.add("is-hidden")
+            // document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
             document.getElementById('page_5').classList.add("is-hidden")
-            document.getElementById('page_6').classList.add("is-hidden")
+            // document.getElementById('page_6').classList.add("is-hidden")
             document.getElementById('page_7').classList.add("is-hidden")
           } else if(id == "dashboard"){
+            document.getElementById('mapping_list').classList.add("is-hidden")
             document.getElementById('dashboard').classList.add("is-active")
             document.getElementById('project').classList.remove("is-active")
-            document.getElementById('search').classList.remove("is-active")
-            document.getElementById('models').classList.remove("is-active")
+            // document.getElementById('search').classList.remove("is-active")
+            // document.getElementById('models').classList.remove("is-active")
             document.getElementById('mapping').classList.remove("is-active")
             document.getElementById('github').classList.remove("is-active")
-            document.getElementById('presentation').classList.remove("is-active")
+            // document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
             document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.remove("is-hidden")
-            document.getElementById('page_2').classList.add("is-hidden")
-            document.getElementById('page_3').classList.add("is-hidden")
+            // document.getElementById('page_2').classList.add("is-hidden")
+            // document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
             document.getElementById('page_5').classList.add("is-hidden")
-            document.getElementById('page_6').classList.add("is-hidden")
+            // document.getElementById('page_6').classList.add("is-hidden")
             document.getElementById('page_7').classList.add("is-hidden")
           }  else if (id == "search"){
+            document.getElementById('mapping_list').classList.add("is-hidden")
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
-            document.getElementById('search').classList.add("is-active")
-            document.getElementById('models').classList.remove("is-active")
+            // document.getElementById('search').classList.add("is-active")
+            // document.getElementById('models').classList.remove("is-active")
             document.getElementById('mapping').classList.remove("is-active")
             document.getElementById('github').classList.remove("is-active")
-            document.getElementById('presentation').classList.remove("is-active")
+            // document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
             document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
-            document.getElementById('page_2').classList.remove("is-hidden")
-            document.getElementById('page_3').classList.add("is-hidden")
+            // document.getElementById('page_2').classList.remove("is-hidden")
+            // document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
             document.getElementById('page_5').classList.add("is-hidden")
-            document.getElementById('page_6').classList.add("is-hidden")
+            // document.getElementById('page_6').classList.add("is-hidden")
             document.getElementById('page_7').classList.add("is-hidden")
           } else if (id == "models"){
+            document.getElementById('mapping_list').classList.add("is-hidden")
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
-            document.getElementById('search').classList.remove("is-active")
-            document.getElementById('models').classList.add("is-active")
+            // document.getElementById('search').classList.remove("is-active")
+            // document.getElementById('models').classList.add("is-active")
             document.getElementById('mapping').classList.remove("is-active")
             document.getElementById('github').classList.remove("is-active")
-            document.getElementById('presentation').classList.remove("is-active")
+            // document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
             document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
-            document.getElementById('page_2').classList.add("is-hidden")
-            document.getElementById('page_3').classList.remove("is-hidden")
+            // document.getElementById('page_2').classList.add("is-hidden")
+            // document.getElementById('page_3').classList.remove("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
             document.getElementById('page_5').classList.add("is-hidden")
-            document.getElementById('page_6').classList.add("is-hidden")
+            // document.getElementById('page_6').classList.add("is-hidden")
             document.getElementById('page_7').classList.add("is-hidden")
           } else if (id == "mapping"){
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
-            document.getElementById('search').classList.remove("is-active")
-            document.getElementById('models').classList.remove("is-active")
+            // document.getElementById('search').classList.remove("is-active")
+            // document.getElementById('models').classList.remove("is-active")
             document.getElementById('mapping').classList.add("is-active")
             document.getElementById('github').classList.remove("is-active")
-            document.getElementById('presentation').classList.remove("is-active")
+            // document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
+            document.getElementById('mapping_list').classList.toggle("is-hidden")
             document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
-            document.getElementById('page_2').classList.add("is-hidden")
-            document.getElementById('page_3').classList.add("is-hidden")
+            // document.getElementById('page_2').classList.add("is-hidden")
+            // document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.remove("is-hidden")
             document.getElementById('page_5').classList.add("is-hidden")
-            document.getElementById('page_6').classList.add("is-hidden")
+            // document.getElementById('page_6').classList.add("is-hidden")
             document.getElementById('page_7').classList.add("is-hidden")
+            generateQuezonCity()
           } else if (id == 'github') {
+            document.getElementById('mapping_list').classList.add("is-hidden")
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
-            document.getElementById('search').classList.remove("is-active")
-            document.getElementById('models').classList.remove("is-active")
+            // document.getElementById('search').classList.remove("is-active")
+            // document.getElementById('models').classList.remove("is-active")
             document.getElementById('mapping').classList.remove("is-active")
             document.getElementById('github').classList.add("is-active")
-            document.getElementById('presentation').classList.remove("is-active")
+            // document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
             document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
-            document.getElementById('page_2').classList.add("is-hidden")
-            document.getElementById('page_3').classList.add("is-hidden")
+            // document.getElementById('page_2').classList.add("is-hidden")
+            // document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
             document.getElementById('page_5').classList.remove("is-hidden")
-            document.getElementById('page_6').classList.add("is-hidden")
+            // document.getElementById('page_6').classList.add("is-hidden")
             document.getElementById('page_7').classList.add("is-hidden")
           } else if (id == 'presentation'){
+            document.getElementById('mapping_list').classList.add("is-hidden")
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
-            document.getElementById('search').classList.remove("is-active")
-            document.getElementById('models').classList.remove("is-active")
+            // document.getElementById('search').classList.remove("is-active")
+            // document.getElementById('models').classList.remove("is-active")
             document.getElementById('mapping').classList.remove("is-active")
             document.getElementById('github').classList.remove("is-active")
-            document.getElementById('presentation').classList.add("is-active")
+            // document.getElementById('presentation').classList.add("is-active")
             document.getElementById('authors').classList.remove("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
             document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
-            document.getElementById('page_2').classList.add("is-hidden")
-            document.getElementById('page_3').classList.add("is-hidden")
+            // document.getElementById('page_2').classList.add("is-hidden")
+            // document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
             document.getElementById('page_5').classList.add("is-hidden")
-            document.getElementById('page_6').classList.remove("is-hidden")
+            // document.getElementById('page_6').classList.remove("is-hidden")
             document.getElementById('page_7').classList.add("is-hidden")
           } 
           else if (id == 'authors') {
+            document.getElementById('mapping_list').classList.add("is-hidden")
             document.getElementById('dashboard').classList.remove("is-active")
             document.getElementById('project').classList.remove("is-active")
-            document.getElementById('search').classList.remove("is-active")
-            document.getElementById('models').classList.remove("is-active")
+            // document.getElementById('search').classList.remove("is-active")
+            // document.getElementById('models').classList.remove("is-active")
             document.getElementById('mapping').classList.remove("is-active")
             document.getElementById('github').classList.remove("is-active")
-            document.getElementById('presentation').classList.remove("is-active")
+            // document.getElementById('presentation').classList.remove("is-active")
             document.getElementById('authors').classList.add("is-active")
             document.getElementById('project_list').classList.add("is-hidden")
             document.getElementById('page_0').classList.add("is-hidden")
             document.getElementById('page_1').classList.add("is-hidden")
-            document.getElementById('page_2').classList.add("is-hidden")
-            document.getElementById('page_3').classList.add("is-hidden")
+            // document.getElementById('page_2').classList.add("is-hidden")
+            // document.getElementById('page_3').classList.add("is-hidden")
             document.getElementById('page_4').classList.add("is-hidden")
             document.getElementById('page_5').classList.add("is-hidden")
-            document.getElementById('page_6').classList.add("is-hidden")
+            // document.getElementById('page_6').classList.add("is-hidden")
             document.getElementById('page_7').classList.remove("is-hidden")
           }
         }
