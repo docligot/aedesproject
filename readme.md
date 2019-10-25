@@ -1,12 +1,8 @@
 # Welcome to the AEDES Project
 
-## Prototype
-
-Check the dashboard [here](http://aedesproject.org). 
-
 ## Our Challenge
 
-AEDES is tackling the SMASH YOUR SDGs challenge under the LIVING IN OUR WORLD category. Specifically we are tackling Goal 3: GOOD HEALTH AND WELL BEING under the UN Sustainable Development Goals.
+AEDES is tackling the [SMASH YOUR SDGs](https://2019.spaceappschallenge.org/challenges/living-our-world/smash-your-sdgs/details) challenge under the [LIVING IN OUR WORLD](https://2019.spaceappschallenge.org/challenges/living-our-world/) category. Specifically we are tackling Goal 3: GOOD HEALTH AND WELL BEING under the UN Sustainable Development Goals.
 
 ## The Problem
 
@@ -44,6 +40,8 @@ Our proposed solution intends to builds on this work by the following principles
 * We test and propose independent and mixed models that combine Google searches and climate data to detect possible factors that affect dengue cases and deaths as well as provide an accurate forecast.
 * We provide the information on an easily navigable interactive web application accessible by the public to help disseminate crucial information and also assist in public health efforts to prevent and contain the disease.
 
+![dengue-cycle](https://github.com/aedesproject/nasa_hack/blob/master/deck/dengue_data.png)
+
 Logically, the behavior captured by the datasets in our study is:
 1. First, precipitation and temperature climate creates mosquito-breeding environments
 2. Mosquitoes spread and get infected by existing dengue cases, thereby spreading the disease
@@ -55,6 +53,8 @@ Therefore by detecting #1 and #3 we can address and hopefully disrupt the diseas
 
 ## Selecting Pilot Areas For Prototype
 
+
+
 For our initial prototype we decided to focus on four areas:
 
 * National Capital Region (Quezon City as a focus)
@@ -63,6 +63,9 @@ For our initial prototype we decided to focus on four areas:
 * ARMM (Cotabato City as a focus)
 
 We selected the above areas due to availability of local weather station in these locations. We decided on NCR as a default and added the three other cities due to the observed spike in Google Searches for dengue related terms indicating possible prevailing public panic in these areas.
+
+Google Searches Spiking in July: 
+![searches](https://github.com/aedesproject/nasa_hack/blob/master/deck/dengue_searches.png)
 
 ## Predicting Dengue Cases and Deaths
 
@@ -73,6 +76,8 @@ We propose to forecast dengue cases and deaths using a combination of:
 * Google Data: Search index for 'dengue', 'dengue symptoms', 'dengue cure', and 'dengue medicine'
 * Lagged values for Climate factors, Google data, and actual cases and deaths
 
+![model](https://github.com/aedesproject/nasa_hack/blob/master/deck/dengue_model.png)
+
 ## Surfacing Mosquito Hotspots From Satellite Data
 
 We propose calculating dengue hotspots from satellite images as the intersection of the following:
@@ -81,6 +86,8 @@ We propose calculating dengue hotspots from satellite images as the intersection
 * Normalized Difference Water Index (NDWI) to identify areas with water.
 
 Combining the two indices and testing for various thresholds we can approximate areas that have stagnant water which are breeding grounds for mosquitoes.
+
+![satellite](https://github.com/aedesproject/nasa_hack/blob/master/deck/satellite.png)
 
 ## Results
 
