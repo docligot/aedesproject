@@ -11,11 +11,12 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Project AEDES" />
     <meta property="og:description" content="AEDES aims to improve public health response against dengue in the Philippines by predicting dengue cases from climate and digital data and pinpointing possible hotspots from satellite data." />
-    <meta property="og:image" content="slides/Slide1.PNG" />
-    <meta name="twitter:image" content="slides/Slide1.PNG" />
+    <meta property="og:image" content="slides/slide1.png" />
+    <meta name="twitter:image" content="slides/slide1.png" />
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project AEDES</title>
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
     <link rel="stylesheet" href="bulma.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src="https://kit.fontawesome.com/05a7e6096a.js" crossorigin="anonymous"></script> -->
@@ -155,7 +156,7 @@
                           </div>
                         </article>
                         <figure class="image">
-                          <img src="slides/Slide1.PNG">
+                          <img src="slides/slide1.png">
                         </figure>
                         <span id="aedes_2"></span>
                         <hr>
@@ -170,17 +171,17 @@
                             <div class="columns">
                               <div class="column is-one-third">
                                 <figure class="image is-square">
-                                  <img src="assets/living.PNG">
+                                  <img src="assets/living.png">
                                 </figure>
                               </div>
                               <div class="column is-one-third">
                                 <figure class="image is-square">
-                                  <img src="assets/sdgs.PNG">
+                                  <img src="assets/sdgs.png">
                                 </figure>
                               </div>
                               <div class="column is-one-third">
                                 <figure class="image is-square">
-                                  <img src="assets/health.PNG">
+                                  <img src="assets/health.png">
                                 </figure>
                               </div>
                             </div>
@@ -216,17 +217,17 @@
                             <div class="columns">
                               <div class="column is-one-third">
                                 <figure class="image is-5by3">
-                                  <img src="assets/problem1.PNG">
+                                  <img src="assets/problem1.png">
                                 </figure>
                               </div>
                               <div class="column is-one-third">
                                 <figure class="image is-5by3">
-                                  <img src="assets/problem2.PNG">
+                                  <img src="assets/problem2.png">
                                 </figure>
                               </div>
                               <div class="column is-one-third">
                                 <figure class="image is-5by3">
-                                  <img src="assets/problem3.PNG">
+                                  <img src="assets/problem3.png">
                                 </figure>
                               </div>
                             </div>
@@ -269,17 +270,17 @@
                               <div class="columns">
                                 <div class="column is-one-third">
                                   <figure class="image is-5by3">
-                                    <img src="assets/solution1.PNG">
+                                    <img src="assets/solution1.png">
                                   </figure>
                                 </div>
                                 <div class="column is-one-third">
                                   <figure class="image is-5by3">
-                                    <img src="assets/solution2.PNG">
+                                    <img src="assets/solution2.png">
                                   </figure>
                                 </div>
                                 <div class="column is-one-third">
                                   <figure class="image is-5by3">
-                                    <img src="assets/solution3.PNG">
+                                    <img src="assets/solution3.png">
                                   </figure>
                                 </div>
                               </div>
@@ -407,17 +408,17 @@
                               <div class="columns">
                                 <div class="column is-one-third">
                                   <figure class="image is-square">
-                                    <img src="assets/literature1.PNG">
+                                    <img src="assets/literature1.png">
                                   </figure>
                                 </div>
                                 <div class="column is-one-third">
                                   <figure class="image is-square">
-                                    <img src="assets/literature2.PNG">
+                                    <img src="assets/literature2.png">
                                   </figure>
                                 </div>
                                 <div class="column is-one-third">
                                   <figure class="image is-square">
-                                    <img src="assets/literature3.PNG">
+                                    <img src="assets/literature3.png">
                                   </figure>
                                 </div>
                               </div>
@@ -543,7 +544,7 @@
                         <section class="block">
                           <div class="block">
                             <figure class="image">
-                              <img src="slides/Slide10.png" alt="">
+                              <img src="slides/slide10.png" alt="">
                             </figure>
                           </div>
                         </section>
