@@ -6,6 +6,26 @@
 	<link rel="stylesheet" href="resources/app_css.css"/>
 	<link rel="stylesheet" href="resources/w3.css"/>	
 	<link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Project AEDES" />
+    <meta name="description" content="AEDES aims to improve public health response against dengue in the Philippines by predicting dengue cases from climate and digital data and pinpointing possible hotspots from satellite data." />
+    <meta name="keywords" content="philippines, satellite data, dengue, google searches, climate, fapar, ndwi, dominic ligot, claire tayco, mark toledo, jansen lopez" />
+    <meta property="og:url" content="http://aedesproject.org" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Project AEDES" />
+    <meta property="og:description" content="AEDES aims to improve public health response against dengue in the Philippines by predicting dengue cases from climate and digital data and pinpointing possible hotspots from satellite data." />
+    <meta property="og:image" content="slides/Slide1.PNG" />
+    <meta name="twitter:image" content="slides/Slide1.PNG" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126660213-5"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-126660213-5');
+	</script>
 </head>
 
 <body class="roboto" onresize="toggleClose('navBar');">
