@@ -106,7 +106,7 @@
 				<li><a class="w3-text-indigo" href="https://www.linkedin.com/in/claire-san-juan-tayco-81361828/">Claire Tayco</a>, Statistical Models</li>
 				<li><a class="w3-text-indigo" href="https://www.linkedin.com/in/jansen-lopez/">Jansen Lopez</a>, Geospatial Models</li>
 				<li><a class="w3-text-indigo" href="https://www.linkedin.com/in/toledomark/">Mark Toledo</a>, Data Engineer</li></ul></p>
-				<p>We welcome collaborators. Contact us via Linked-IN, or email us at <a class="w3-text-indigo" href="mailto:support@cirrolytix.com">support@cirrolytix.com</a>.</p>
+				<p>We welcome collaborators. Contact us via Linked-IN, or email us at <a class="w3-text-indigo" href="mailto:support@aedesproject.org">support@aedesproject.org</a>.</p>
 			</section>
 			<footer class="w3-padding w3-small w3-black">
 				&copy; 2019 Team AEDES
