@@ -57,7 +57,8 @@
 			<section class="w3-padding">
 				<div class="w3-xlarge" >Predicted Mosquito Hotspots</div>	
 				<br/><? include ('maps/index.html'); ?>
-				<p class="w3-small">Source: NDWI, NDVI, FAPAR Readings; Sentinel-2 Copernicus, Landsat</p>
+				<p class="w3-small">Source: Sentinel-2 Copernicus, Landsat</p>
+				<p class="w3-small">Please allow time to load data. Pins represent intersection of NDWI, NDVI, FAPAR readings. See <a class="w3-text-indigo" href="#about">below</a> for references.</p>
 			</section>
 
 			<span id="section2" ><br/><br/></span><hr/>
@@ -65,6 +66,7 @@
 				<div class="w3-xlarge">Social Listening: Dengue Trends</div>	
 				<br/><? include ('searches/index.html'); ?>
 				<p class="w3-small">Source: Google Search Index 'dengue' (January 2017 = 1)</p>
+				<p class="w3-small">Please allow time to load data. Indices represent relative number of searches from 2017.</p> 
 			</section>
 
 			<span id="section3" ><br/><br/></span><hr/>
@@ -72,6 +74,7 @@
 				<div class="w3-xlarge">Dengue Forecast</div>	
 				<br/><? include ('forecast/index.html'); ?>
 				<p class="w3-small">Source: Climate DOST-PAGASA, Google Searches</p>
+				<p class="w3-small">Please allow time to load data. Models represent top 3 fitted forecasts for period 2015-2018. Model predictors tested: average rainfall, average temperature, google searches (dengue, dengue fever, dengue symptoms, dengue medicine), monthly seasonality, lagged effects. Please <a class="w3-text-indigo" href="#contact">contact us</a> for model definitions. </p>
 			</section>
 			
 			<span id="about" ><br/><br/></span><hr/>
