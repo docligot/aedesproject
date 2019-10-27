@@ -1,0 +1,196 @@
+<div class="w3-row">
+
+	<select class="w3-quarter w3-select w3-dark-grey" id="cityID" onchange="getCharts();">
+		<option value=''>Select Location:</option>
+		<option value='Aggregate'>Total Philippines</option>
+		<option value='QC'>Quezon City (NCR)</option>
+		<option value='Tacloban'>Tacloban City (Eastern Visayas)</option>
+		<option value='Iloilo'>Iloilo City (Western Visayas)</option>
+		<option value='Cotabato'>Cotabato City (ARMM)</option>
+	</select>			
+
+	<select class="w3-quarter w3-select w3-dark-grey" id="series1" onchange="getCharts();">
+		<option value="">Select Series 1</option>
+		<option value="Cases">Actual Cases</option>
+		<option value="Model1">Model 1</option>
+		<option value="Model2">Model 2</option>
+		<option value="Model3">Model 3</option>
+	</select>
+
+	<select class="w3-quarter w3-select w3-dark-grey" id="series2" onchange="getCharts();">
+		<option value="">Select Series 2</option>
+		<option value="Cases">Actual Cases</option>
+		<option value="Model1">Model 1</option>
+		<option value="Model2">Model 2</option>
+		<option value="Model3">Model 3</option>
+	</select>
+</div>
+
+<br/>
+
+<div class="w3-row">
+<div id="chartContainer" class="chart-container w3-black w3-padding" style="height: 400px;">
+</div>
+</div>
+
+<script>
+
+function resetChart() {
+	document.getElementById('chartContainer').innerHTML = '<canvas id="myChart" style="height: 250px;"></canvas>';
+}
+
+function getCharts() {
+	var cityID = document.getElementById('cityID').value;
+	var series1 = document.getElementById('series1').value;
+	var series2 = document.getElementById('series2').value;
+	if (cityID && series1 && series2) {
+		resetChart();
+		extractData(cityID, series1, series2);
+	}
+}
+
+function extractData(cityID, series1, series2) {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var dataArray = JSON.parse(this.responseText);
+			drawChart(dataArray[0], dataArray[1], 'line', 'myChart', series1, series2);
+		} 
+	};
+	xmlhttp.open("GET", "forecast/call_chart.php?cityID=" + cityID + "&series1=" + series1 + "&series2=" + series2, true);
+	xmlhttp.send();
+}
+
+function drawChart(data1, data2, chartType, chartContainer, label1, label2) {
+	
+	window.chartColors1 = {
+		red: 'rgb(255, 99, 132)',
+		orange: 'rgb(255, 159, 64)',
+		yellow: 'rgb(255, 205, 86)',
+		green: 'rgb(75, 192, 192)',
+		blue: 'rgb(54, 162, 235)',
+		purple: 'rgb(153, 102, 255)',
+		grey: 'rgb(201, 203, 207)'
+	};
+
+	var ctx1 = document.getElementById(chartContainer).getContext('2d');
+	var chart = new Chart(ctx1, {
+		// The type of chart we want to create
+		type: chartType,
+
+		// The data for our dataset
+		data: {
+			labels: ["May-15"
+					,"Jun-15"
+					,"Jul-15"
+					,"Aug-15"
+					,"Sep-15"
+					,"Oct-15"
+					,"Nov-15"
+					,"Dec-15"
+					,"Jan-16"
+					,"Feb-16"
+					,"Mar-16"
+					,"Apr-16"
+					,"May-16"
+					,"Jun-16"
+					,"Jul-16"
+					,"Aug-16"
+					,"Sep-16"
+					,"Oct-16"
+					,"Nov-16"
+					,"Dec-16"
+					,"Jan-17"
+					,"Feb-17"
+					,"Mar-17"
+					,"Apr-17"
+					,"May-17"
+					,"Jun-17"
+					,"Jul-17"
+					,"Aug-17"
+					,"Sep-17"
+					,"Oct-17"
+					,"Nov-17"
+					,"Dec-17"
+					,"Jan-18"
+					,"Feb-18"
+					,"Mar-18"
+					,"Apr-18"
+					,"May-18"
+					,"Jun-18"
+					,"Jul-18"
+					,"Aug-18"
+					,"Sep-18"
+					,"Oct-18"
+					,"Nov-18"
+					,"Dec-18"
+					],
+			datasets: [
+				{
+					label: label1,
+					fill: false, 
+					backgroundColor: window.chartColors1.blue,
+					borderColor: window.chartColors1.blue,
+					borderDash: [10,5],
+					borderWidth: 2, 
+					data: data1, 
+					//yAxisID: 'y1'
+				},
+				{
+					label: label2,
+					fill: false, 
+					backgroundColor: window.chartColors1.red,
+					borderColor: window.chartColors1.red,
+					borderWidth: 2, 
+					//steppedLine: true,
+					data: data2, 
+					//yAxisID: 'y2'
+				}
+			]
+		},
+
+		// Configuration options go here
+		options: {
+			maintainAspectRatio: false,
+			legend: {
+				display: true,
+				position: 'bottom', 
+				labels: {
+					fontColor: '#fff'
+				}
+			}, 
+			scales: {
+				yAxes: [{
+					position: 'left',
+					//id: 'y1',
+					scaleLabel: {
+						display: true, 
+						labelString: label1
+					}, 
+					ticks: {
+						beginAtZero: false, 
+						fontColor: 'white', 
+						fontSize: 8
+					}, 
+					gridLines: {
+						display: false, 
+						color: '#303030',
+						borderWidth: 0.5
+					}
+				}], 
+				xAxes: [{
+					ticks: {
+						fontColor: 'white', 
+						fontSize: 8
+					}, 
+					gridLines: {
+						display: false,
+						color: '#303030',
+						borderWidth: 0.5
+					}
+				}]
+			}
+		}
+	})
+}
+</script>

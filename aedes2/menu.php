@@ -1,0 +1,7 @@
+<a href="#section1" onclick="toggleClose('navBar');"><div class="hover-ambient w3-bar-item"><i class="fas fa-map-marked-alt" style="margin-right: 10px;"></i><span class="w3-hide-medium w3-hide-small">Mosquito </span>Hotspots</div></a>
+<a href="#section2" onclick="toggleClose('navBar');"><div class="hover-ambient w3-bar-item"><i class="fas fa-search-location" style="margin-right: 10px;"></i><span class="w3-hide-medium w3-hide-small">Dengue </span>Trends</div></a>
+<a href="#section3"onclick="toggleClose('navBar');"><div class="hover-ambient w3-bar-item"><i class="fas fa-chart-line" style="margin-right: 10px;"></i><span class="w3-hide-medium w3-hide-small">Dengue </span>Forecast</div></a>
+<a href="#about"onclick="toggleClose('navBar');"><div class="hover-ambient w3-bar-item"><i class="fas fa-chart-bar" style="margin-right: 10px;"></i>About</div></a>
+<hr />
+<div class="w3-bar-item">Global Finalist: <br/>
+<a href="https://2019.spaceappschallenge.org/challenges/living-our-world/smash-your-sdgs/teams/aedes-project/project"><img src="resources/images/space_apps.svg" height="40"/></a></div>

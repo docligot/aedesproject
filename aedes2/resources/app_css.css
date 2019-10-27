@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "Montserrat";
+	src: url('Montserrat-Regular.otf');
+}
+
+@font-face {
+	font-family: "QuattrocentoSans";
+	src: url('QuattrocentoSans.ttf');
+}
+
+@font-face {
+	font-family: "LeagueSpartan";
+	src: url('LeagueSpartan-Bold.otf');
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url('RobotoCondensed-Light.ttf');
+}
+
+.roboto {
+	font-family: "Roboto", sans-serif
+}
+
+.leaguespartan {
+	font-family: "LeagueSpartan", sans-serif
+}
+
+.montserrat {
+	font-family: "Montserrat", sans-serif
+}
+
+.quattrocento {
+	font-family: "QuattrocentoSans", sans-serif
+}
+
+.bold {
+	font-weight: bold
+}
+
+.italic {
+	font-style: italic
+}
+
+a {
+	text-decoration: none
+}
+
+.spacer {
+	height: 52px
+}
+
+.vh {
+	height: 100vh
+}
+
+.indicator {
+	padding: 2.5px;
+	font-size: 24px;
+}
+
+.ambient {
+	color:#fff!important;
+	background-color:#101010!important;
+}
+
+.hover-ambient:hover {
+	color:#fff!important;
+	background-color:#303030!important;
+}
