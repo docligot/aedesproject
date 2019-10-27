@@ -53,6 +53,14 @@
 	<div class="w3-row">
 		<div class="w3-col l2 w3-hide-medium w3-hide-small">&nbsp;</div>
 		<div class="w3-col w3-grey l10">
+			<span id="snapshot" ><br/></span><hr/>
+			<section class="w3-padding">
+				<div class="w3-xlarge" >Dengue Snapshot</div>	
+				<? include ('dashboard/index.html'); ?>
+				<p class="w3-small">Source: Deparment of Health Reports, Google Searches, DOST-PAGASA Climate Readings</p>
+				<p class="w3-small">Please allow time to load data. See <a class="w3-text-indigo" href="#about">below</a> for references.</p>
+			</section>
+
 			<span id="section1" ><br/></span><hr/>
 			<section class="w3-padding">
 				<div class="w3-xlarge" >Predicted Mosquito Hotspots</div>	
@@ -61,7 +69,7 @@
 				<p class="w3-small">Please allow time to load data. Pins represent intersection of NDWI, NDVI, FAPAR readings. See <a class="w3-text-indigo" href="#about">below</a> for references.</p>
 			</section>
 
-			<span id="section2" ><br/><br/></span><hr/>
+			<span id="section2" ><br/></span><hr/>
 			<section class="w3-padding">
 				<div class="w3-xlarge">Social Listening: Dengue Trends</div>	
 				<br/><? include ('searches/index.html'); ?>
@@ -69,15 +77,15 @@
 				<p class="w3-small">Please allow time to load data. Indices represent relative number of searches from 2017.</p> 
 			</section>
 
-			<span id="section3" ><br/><br/></span><hr/>
+			<span id="section3" ><br/></span><hr/>
 			<section class="w3-padding">
 				<div class="w3-xlarge">Dengue Forecast</div>	
 				<br/><? include ('forecast/index.html'); ?>
-				<p class="w3-small">Source: Climate DOST-PAGASA, Google Searches</p>
+				<p class="w3-small">Source: Deparment of Health Reports, Climate DOST-PAGASA, Google Searches</p>
 				<p class="w3-small">Please allow time to load data. Models represent top 3 fitted forecasts for period 2015-2018. Model predictors tested: average rainfall, average temperature, google searches (dengue, dengue fever, dengue symptoms, dengue medicine), monthly seasonality, lagged effects. Please <a class="w3-text-indigo" href="#contact">contact us</a> for model definitions. </p>
 			</section>
 			
-			<span id="about" ><br/><br/></span><hr/>
+			<span id="about" ><br/></span><hr/>
 			<section class="w3-padding">
 				<div class="w3-xlarge" >Advanced Early Dengue Prediction and Exploration Service (AEDES)</div>
 				<p>AEDES aims to improve public health response against dengue in the Philippines by predicting dengue cases from climate and digital data and pinpointing possible hotspots from satellite data.</p>
@@ -98,7 +106,8 @@
 				<li>NDVI: Normalized difference vegetation index, reference <a class="w3-text-indigo" href="https://earthobservatory.nasa.gov/features/MeasuringVegetation/measuring_vegetation_2.php">here</a>.</li>
 				<li>NDWI: Normalized Difference Water Index, reference <a class="w3-text-indigo" href="http://ceeserver.cee.cornell.edu/wdp2/cee6150/Readings/Gao_1996_RSE_58_257-266_NDWI.pdf">here</a>.</li></ul></p>
 			</section>
-			<span id="contact" ><br/><br/></span><hr/>
+			
+			<span id="contact" ><br/></span><hr/>
 			<section class="w3-padding">
 				<div class="w3-xlarge" >Contact Us</div>	
 				<p>The AEDES team consists of the following:

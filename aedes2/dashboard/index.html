@@ -1,0 +1,28 @@
+<div class="w3-row">
+	<select class="w3-quarter w3-select w3-dark-grey" id="snapshot" onchange="getSnapshot(this.value);">
+		<option value="">Select Period:</option>
+		<option value="Apr-19">Apr-19</option>
+		<option value="May-19">May-19</option>
+		<option value="Jun-19">Jun-19</option>
+		<option value="Jul-19">Jul-19</option>
+	</select>
+</div>
+
+
+<div class="w3-row" id="dashboardArea"></div>
+
+
+<script>
+
+function getSnapshot(selected) {
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById('dashboardArea').innerHTML = this.responseText;
+		} 
+	};
+	xmlhttp.open("GET", "dashboard/get_snapshot.php?snapshot=" + selected, true);
+	xmlhttp.send();
+}
+
+</script>
