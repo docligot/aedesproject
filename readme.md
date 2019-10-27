@@ -104,4 +104,4 @@ The AEDES team consists of the following:
 * [Jansen Lopez](https://www.linkedin.com/in/jansen-lopez/), Geospatial Models
 * [Mark Toledo](https://www.linkedin.com/in/toledomark/), Data Engineer
 
-We welcome collaborators. Contact us via Linked-IN, or email us at support@cirrolytix.com.
+We welcome collaborators. Contact us via Linked-IN, or email us at support@aedesproject.org.
