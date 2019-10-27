@@ -34,7 +34,7 @@
 	<header class="w3-top">
 		<div class="w3-black w3-xlarge w3-bar">
 			<div class="w3-bar-item w3-button w3-hide-large" onclick="toggle('navBar');"><i class="fa fa-bars"></i></div>
-			<div class="w3-bar-item"><img src="resources/images/aedes_logo_white.png" height="30" /></div>
+			<div class="w3-bar-item"><a href="http://aedesproject.org"><img src="resources/images/aedes_logo_white.png" height="30" /></a></div>
 		</div>
 	</header>
 	
