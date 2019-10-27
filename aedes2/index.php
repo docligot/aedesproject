@@ -15,8 +15,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Project AEDES" />
     <meta property="og:description" content="AEDES aims to improve public health response against dengue in the Philippines by predicting dengue cases from climate and digital data and pinpointing possible hotspots from satellite data." />
-    <meta property="og:image" content="slides/Slide1.PNG" />
-    <meta name="twitter:image" content="slides/Slide1.PNG" />
+    <meta property="og:image" content="resources/images/slide1.png" />
+    <meta name="twitter:image" content="resources/images/slide1.png" />
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126660213-5"></script>
 	<script>
@@ -94,9 +94,17 @@
 				<ul><li>FAPAR: Fraction of Absorbed Photosynthetically Active Radiation, reference <a class="w3-text-indigo" href="https://pdfs.semanticscholar.org/d178/bd58b51fd18c2b97b07aa5c6154d49562a87.pdf">here</a>.</li>
 				<li>NDVI: Normalized difference vegetation index, reference <a class="w3-text-indigo" href="https://earthobservatory.nasa.gov/features/MeasuringVegetation/measuring_vegetation_2.php">here</a>.</li>
 				<li>NDWI: Normalized Difference Water Index, reference <a class="w3-text-indigo" href="http://ceeserver.cee.cornell.edu/wdp2/cee6150/Readings/Gao_1996_RSE_58_257-266_NDWI.pdf">here</a>.</li></ul></p>
-				<hr/>
-			</section>			
-
+			</section>
+			<span id="contact" ><br/><br/></span><hr/>
+			<section class="w3-padding">
+				<div class="w3-xlarge" >Contact Us</div>	
+				<p>The AEDES team consists of the following:
+				<ul><li><a class="w3-text-indigo" href="https://www.linkedin.com/in/docligot/">Dominic Ligot</a>, Team Lead</li>
+				<li><a class="w3-text-indigo" href="https://www.linkedin.com/in/claire-san-juan-tayco-81361828/">Claire Tayco</a>, Statistical Models</li>
+				<li><a class="w3-text-indigo" href="https://www.linkedin.com/in/jansen-lopez/">Jansen Lopez</a>, Geospatial Models</li>
+				<li><a class="w3-text-indigo" href="https://www.linkedin.com/in/toledomark/">Mark Toledo</a>, Data Engineer</li></ul></p>
+				<p>We welcome collaborators. Contact us via Linked-IN, or email us at <a class="w3-text-indigo" href="mailto:support@cirrolytix.com">support@cirrolytix.com</a>.</p>
+			</section>
 			<footer class="w3-padding w3-small w3-black">
 				&copy; 2019 Team AEDES
 			</footer>
