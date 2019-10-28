@@ -91,7 +91,7 @@
 				<p>AEDES aims to improve public health response against dengue in the Philippines by predicting dengue cases from climate and digital data and pinpointing possible hotspots from satellite data.</p>
 				
 				<p>The service relies on 3 data sets:
-				<ul><li>Global Data: Satellite imaging data from <a class="w3-text-indigo" href="https://sentinel.esa.int/web/sentinel/sentinel-data-access">Sentinel-2 Copernicus</a> and <a href="https://www.usgs.gov/land-resources/nli/landsat/landsat-8">Landsat</a></li>
+				<ul><li>Global Data: Satellite imaging data from <a class="w3-text-indigo" href="https://sentinel.esa.int/web/sentinel/sentinel-data-access">Sentinel-2 Copernicus</a> and <a class="w3-text-indigo" href="https://www.usgs.gov/land-resources/nli/landsat/landsat-8">Landsat</a></li>
 				<li>Local Data: Climate data from <a class="w3-text-indigo" href="http://bagong.pagasa.dost.gov.ph/climate/climatological-normals">DOST-PAGASA</a></li>
 				<li>Digital Data: <a class="w3-text-indigo" href="https://trends.google.com/trends/explore?date=today%205-y&geo=PH&q=dengue">Google search trends for 'dengue'</a> and related terms</li></ul></p>
 
