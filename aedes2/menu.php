@@ -6,4 +6,4 @@
 <a href="#contact"onclick="toggleClose('navBar');"><div class="hover-ambient w3-bar-item"><i class="fas fa-envelope" style="margin-right: 10px;"></i>Contact Us</div></a>
 <hr />
 <div class="w3-bar-item">Global Finalist: <br/>
-<a href="https://2019.spaceappschallenge.org/challenges/living-our-world/smash-your-sdgs/teams/aedes-project/project"><img src="resources/images/space_apps.svg" height="40"/></a></div>
+<a href="https://2019.spaceappschallenge.org/challenges/living-our-world/smash-your-sdgs/teams/aedes-project/project"><img src="resources/images/space_apps.svg" width="150"/></a></div>
