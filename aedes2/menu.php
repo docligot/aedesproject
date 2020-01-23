@@ -5,5 +5,6 @@
 <a href="#about"onclick="toggleClose('navBar');"><div class="hover-ambient w3-bar-item"><i class="fas fa-chart-bar" style="margin-right: 10px;"></i>About</div></a>
 <a href="#contact"onclick="toggleClose('navBar');"><div class="hover-ambient w3-bar-item"><i class="fas fa-envelope" style="margin-right: 10px;"></i>Contact Us</div></a>
 <hr />
-<div class="w3-bar-item">Global Finalist: <br/>
-<a href="https://2019.spaceappschallenge.org/challenges/living-our-world/smash-your-sdgs/teams/aedes-project/project"><img src="resources/images/space_apps.svg" width="150"/></a></div>
+<div class="w3-bar-item">2019 Global Winner: <br/>
+<a href="https://2019.spaceappschallenge.org/challenges/living-our-world/smash-your-sdgs/teams/aedes-project/project"><img src="resources/images/space_apps.svg" width="150"/></a><br/>
+<p class="w3-padding">Best Use Of Data</p></div>
