@@ -97,6 +97,10 @@ The preliminary run of our forecast model shows we are able to approximate the t
 
 ## Contact Us
 
+AEDES was [2019 Global Winner](https://2019.spaceappschallenge.org/awards/) of the NASA Space Apps Challenge winning **Best Use Of Data**. 
+
+![alt text](https://github.com/docligot/aedesproject/blob/master/deck/TEAM_AEDES.jpg "Grand Prize")
+
 The AEDES team consists of the following: 
 
 * [Dominic Ligot](https://www.linkedin.com/in/docligot/), Team Lead
