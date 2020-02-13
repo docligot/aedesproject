@@ -109,3 +109,7 @@ The AEDES team consists of the following:
 * [Mark Toledo](https://www.linkedin.com/in/toledomark/), Data Engineer
 
 We welcome collaborators. Contact us via Linked-IN, or email us at support@aedesproject.org.
+
+## License
+
+This work is provided under the terms of Creative Commons Attribution 4.0 International ([CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)) license. 
