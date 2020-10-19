@@ -112,4 +112,4 @@ We welcome collaborators. Contact us via Linked-IN, or email us at support@aedes
 
 ## License
 
-This work is provided under the terms of Creative Commons Attribution 4.0 International ([CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)) license. 
+This work is provided under the terms of Creative Commons Attribution 4.0 International ([CC-BY-NC-SA-4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)) license. 
